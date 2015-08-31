@@ -4,58 +4,172 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
   <body ng-app="slamApp">
+
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">slam</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
+    <div id="preloader">
+        <div class="pre_container">
+            <div class="loader">
+            </div>
         </div>
-      </div>
     </div>
 
-    <div class="container">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-fixed-top nav_mask">
+        <div class="navi_container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">
+                        Toggle navigation 
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                </button>
+                <a class="navbar-brand" href="#home_slider">
+                    Slam
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#about_menu">
+                            About 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#schedule_menu">
+                        Schedule </a>
+                    </li>
+                    <li>
+                        <a href="#speakers_menu">
+                        Speakers </a>
+                    </li>
+                    <li>
+                        <a href="#reservation_menu">
+                        Reservation </a>
+                    </li>
+                    <li>
+                        <a href="#past_menu">
+                        Past </a>
+                    </li>
+                    <li>
+                        <a href="#contact_menu">
+                        Contact </a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.nav-collapse -->
+    </nav>
+
     <div ng-view=""></div>
-    </div>
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+    <footer>
+        <div class="mini_gap">
+        </div>
+        <div class="first_line">
+        </div>
+        <div class="first_title">
+            <p>
+                Sponsors
+            </p>
+        </div>
+        <div class="first_description">
+            <p>
+                Annual Design Days Conference is brought to you by:
+            </p>
+        </div>
+        <div class="gap">
+        </div>
+        <div class="sponsor_box">
+            <div class="sponsor_featured wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+            <div class="sponsor_featured wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+            <div class="sponsor_basic wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+            <div class="sponsor_basic wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+            <div class="sponsor_basic wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+            <div class="sponsor_basic wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+            <div class="sponsor_basic wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+            <div class="sponsor_basic wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+            <div class="sponsor_basic wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+            <div class="sponsor_basic wow fadeIn">
+                <div class="image_featured">
+                </div>
+            </div>
+        </div>
+        <div class="gap">
+        </div>
+        <div class="footer wow fadeIn">
+            <a class="link" href="#">Sitemap</a>
+            <span class="link">|</span>
+            <a class="link" href="#">Application</a>
+            <span class="link">|</span>
+            <a class="link" href="#">Get in touch</a>
+            <span class="link">|</span>
+            <a class="link" href="#">Buy me now</a>
+            <div class="mini_gap">
+            </div>
+            <a href="#" class="contact_icon fa fa-facebook">
+            </a>
+            <a href="#" class="contact_icon fa fa-twitter">
+            </a>
+            <a href="#" class="contact_icon fa fa-google-plus">
+            </a>
+            <a href="#" class="contact_icon fa fa-pinterest-p">
+            </a>
+            <a href="#" class="contact_icon fa fa-sellsy">
+            </a>
+            <p class="copyright"><span>&copy;</span>Copyright Eventime <span>2015</span></p>
+        </div>
+    </footer>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -71,10 +185,22 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/minify.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
