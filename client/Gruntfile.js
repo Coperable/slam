@@ -52,6 +52,11 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
+        less: {
+            files: ["<%= yeoman.app %>/styles-less/{,*/}*.less"],
+            tasks: ["less:server"]
+        },
+
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -214,6 +219,43 @@ module.exports = function (grunt) {
         ]
       }
     },
+
+    less: {
+        server: {
+            options: {
+                strictMath: true,
+                dumpLineNumbers: true,
+                sourceMap: true,
+                sourceMapRootpath: "",
+                outputSourceFiles: true
+            },
+            files: [
+                {
+                    expand: true,
+                    cwd: "<%= yeoman.app %>/styles-less",
+                    src: "{,*/}*.less",
+                    dest: ".tmp/styles",
+                    ext: ".css"
+                }
+            ]
+        },
+        dist: {
+            options: {
+                cleancss: true,
+                report: 'min'
+            },
+            files: [
+                {
+                    expand: true,
+                    cwd: "<%= yeoman.app %>/styles-less",
+                    src: "{,*/}*.less",
+                    dest: ".tmp/styles",
+                    ext: ".css"
+                }
+            ]
+        }
+    },
+
 
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
@@ -389,10 +431,13 @@ module.exports = function (grunt) {
       server: [
         'copy:styles'
       ],
+        lessServer: ["less:server", "copy:styles"],
+        lessDist: ["less:dist", "copy:styles", "htmlmin"],
       test: [
         'copy:styles'
       ],
       dist: [
+        'less:dist',
         'copy:styles',
         'imagemin',
         'svgmin'
@@ -440,6 +485,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'less',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
