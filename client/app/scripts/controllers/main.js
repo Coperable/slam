@@ -19,4 +19,17 @@ angular.module('slamApp')
     };
 
     $scope.setup_components();
+})
+.controller('revista-view', function ($scope) {
+
+})
+.controller('torneo-view', function ($scope) {
+
+})
+.controller('foro-view', function ($scope) {
+
+})
+.controller('profile-view', function ($scope) {
+
 });
+

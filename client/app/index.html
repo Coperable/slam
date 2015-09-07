@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,15 +15,26 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="styles/custom.css">
     <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/slam.css">
+
+    <!-- TIPSO: jquery para hacer tooltips: -->
+    <link rel="stylesheet" href="scripts/tipso/tipso.css">
+
+    <!-- FONTELLO: fuente de íconos: -->
+    <link rel="stylesheet" href="fonts/fontello/css/animation.css">
+
+    <link rel="stylesheet" href="fonts/fontello/css/slam.css">
+
     <!-- endbuild -->
     <base href="/">
 
-  </head>
-  <body ng-app="slamApp">
+</head>
+
+<body ng-app="slamApp">
 
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -50,36 +62,44 @@
                     <span class="icon-bar">
                     </span>
                 </button>
-                <a class="navbar-brand" href="#home_slider">
-                    Slam
+                <a class="navbar-brand" ng-href="/">
+                    <i class="icono icon-slam-logo04 icono-3x logo-nav"></i>
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="#about_menu">
-                            About 
+                            <i class="icon-mapacoperable"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#schedule_menu">
-                        Schedule </a>
+                        <i class="icon-copa"></i> </a>
                     </li>
                     <li>
                         <a href="#speakers_menu">
-                        Speakers </a>
+                        <i class="icon-jugador"></i> </a>
                     </li>
                     <li>
-                        <a href="#reservation_menu">
-                        Reservation </a>
+                        <a ng-href="/profile">
+                        <i class="fa fa-user"></i> </a>
                     </li>
                     <li>
-                        <a href="#past_menu">
-                        Past </a>
+                        <a ng-href="/foro">
+                        <i class="fa fa-question"></i> </a>
+                    </li>
+                    <li>
+                        <a ng-href="/torneo">
+                        <i class="fa fa-question"></i> </a>
+                    </li>
+                    <li>
+                        <a ng-href="/revista">
+                        <i class="fa fa-question"></i> </a>
                     </li>
                     <li>
                         <a href="#contact_menu">
-                        Contact </a>
+                        <i class="fa fa-question"></i> </a>
                     </li>
                 </ul>
             </div>
@@ -89,87 +109,144 @@
     </nav>
 
     <header id="home_slider" class="carousel slide">
-    <!-- Wrapper for Slides -->
-    <div class="carousel-inner">
-      <div class="item active ">
-        <!-- Set the first background image using inline CSS below. -->
-        <div class="fill" style="background-image:url('images/slider_1.jpg');">
-        </div>
-        <div class="fill_mask">
-          <div class="description ">
-            <h2 class="details wow fadeInDown">
-            Design Days Conference </h2>
-            <div class="details wow fadeInUp">
-              <div class="fa fa-map-marker fa-2x">
-              </div>
-              <p>
-                 Main Conference Hall, New York, 180/2
-              </p>
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            
+            <div class="item active ">
+                
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/IMG-HEADER01.jpg');"></div>
+                
+                <div class="fill_mask">
+                    <div class="description ">
+                        <h2 class="details wow fadeInDown">
+                        <img class="logo-principal" src="images/slam-LOGO.png"> </h2>
+                        <div class="details wow fadeInUp">
+                            <p>
+                                <span class="left tipso_style" data-tipso="This is a left TIPSO!">Argentina</span>
+                            </p>
+                        </div>
+                        <div class="buttons ">
+                            <a class="wow fadeInLeft btn eventime_button" href="#about_menu" role="button">
+                                Conocer más </a>
+                            <a class="wow fadeInRight btn eventime_button" href="#reservation_menu" role="button">
+                                Registrate </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="details wow fadeInUp">
-              <div class="fa fa-clock-o fa-2x">
-              </div>
-              <p>
-                 20-24 AUG 2015
-              </p>
+
+            <div class="item">
+            
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/IMG-HEADER10.jpg');"></div>
+                
+                <div class="fill_mask">
+                    <div class="description ">
+                        
+                        <h2 class="details wow fadeInDown">
+                            Torneo de CELEBRACIÓN
+                        </h2>
+                        
+                        <div class="details wow fadeInUp">
+                            <div class="fa fa-map-marker fa-2x"></div>
+                            <p>
+                                Oreja Negra - Uriarte 1938, CABA
+                            </p>
+                        </div>
+                        
+                        <div class="details wow fadeInUp">
+                            <div class="fa fa-clock-o fa-2x"></div>
+                            <p>
+                                28 Oct 2015
+                            </p>
+                        </div>
+                        
+                        <div class="buttons ">
+                            <a class="wow fadeInLeft btn eventime_button" href="#about_menu" role="button">
+                                Conocer más </a>
+                            <a class="wow fadeInRight btn eventime_button" href="#reservation_menu" role="button">
+                                Registrate </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="buttons ">
-              <a class="wow fadeInLeft btn eventime_button" href="#about_menu" role="button">
-              Know more </a>
-              <a class="wow fadeInRight btn eventime_button" href="#reservation_menu" role="button">
-              REGISTRATION </a>
+
+          <div class="item">
+            <!-- Set the first background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('images/IMG-HEADER07.jpg');"></div>
+            <div class="fill_mask">
+                <div class="description ">           
+                    <div class="details wow fadeInUp">
+                        <blockquote>
+                            <div class="fa fa-quote-left fa-2x"></div>
+                                Aprendí sobre el sexo oral en una esquina de once cuando tenía once años gracias a un camionero.
+                            <div class="fa fa-quote-right fa-2x"></div>
+                        </blockquote>
+                    </div>
+                    <h3>Mariana Bugallo</h3>
+                    <div class="buttons">
+                        <a class="wow fadeInUp btn eventime_button" href="#speakers_menu" role="button">
+                        Participantes! </a>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <!-- Set the first background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('images/IMG-HEADER11.jpg');"></div>
+            <div class="fill_mask">
+                <div class="description ">           
+                    <div class="details wow fadeInUp">
+                        <blockquote>
+                            <div class="fa fa-quote-left fa-2x"></div>
+                                No entiendo por qué elaboramos discursos para pertenecer a la normalidad, y en pos de encajar nos privamos de lo bello, artificioso y delirante de ser las locas más locas. 
+                            <div class="fa fa-quote-right fa-2x"></div>
+                        </blockquote>
+                    </div>
+                    <h3>MHORIS EMM</h3>
+                    <div class="buttons">
+                        <a class="wow fadeInUp btn eventime_button" href="#speakers_menu" role="button">
+                        Participantes! </a>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <!-- Set the first background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('images/slider_3.jpg');">
+            </div>
+            <div class="fill_mask">
+              <div class="description ">
+                <h2 class="wow fadeInUp">
+                Unique Design Days </h2>
+                <div class="details wow fadeInDown">
+                  <div class="fa fa-clock-o fa-2x">
+                  </div>
+                  <p>
+                     20-24 AUG 2015
+                  </p>
+                </div>
+                <div class="buttons">
+                  <a class="wow fadeInUp btn eventime_button" href="#schedule_menu" role="button">
+                  schedule</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="item">
-        <!-- Set the first background image using inline CSS below. -->
-        <div class="fill" style="background-image:url('images/slider_2.jpg');">
-        </div>
-        <div class="fill_mask">
-          <div class="description ">
-            <h2 class="wow fadeInUp">
-            The world's most successful designers</h2>
-            <div class="buttons">
-              <a class="wow fadeInUp btn eventime_button" href="#speakers_menu" role="button">
-              Speakers </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <!-- Set the first background image using inline CSS below. -->
-        <div class="fill" style="background-image:url('images/slider_3.jpg');">
-        </div>
-        <div class="fill_mask">
-          <div class="description ">
-            <h2 class="wow fadeInUp">
-            Unique Design Days </h2>
-            <div class="details wow fadeInDown">
-              <div class="fa fa-clock-o fa-2x">
-              </div>
-              <p>
-                 20-24 AUG 2015
-              </p>
-            </div>
-            <div class="buttons">
-              <a class="wow fadeInUp btn eventime_button" href="#schedule_menu" role="button">
-              schedule</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a class="wow fadeInLeft left_arrow" href="#home_slider" data-slide="prev">
-    <svg width="26px" height="48">
-    <polygon points="3.3,24.5 25.5,2.3 24,0.8 0.3,24.5 24,48.2 25.5,46.7"/>
-    </svg>
-    </a>
-    <a class="wow fadeInRight right_arrow" href="#home_slider" data-slide="next">
-    <svg width="26px" height="48">
-    <polygon points="22.5,24.5 0.3,2.3 1.8,0.8 25.5,24.5 1.8,48.2 0.3,46.7"/>
-    </svg>
-    </a>
+        <a class="wow fadeInLeft left_arrow" href="#home_slider" data-slide="prev">
+        <svg width="26px" height="48">
+        <polygon points="3.3,24.5 25.5,2.3 24,0.8 0.3,24.5 24,48.2 25.5,46.7"/>
+        </svg>
+        </a>
+        <a class="wow fadeInRight right_arrow" href="#home_slider" data-slide="next">
+        <svg width="26px" height="48">
+        <polygon points="22.5,24.5 0.3,2.3 1.8,0.8 25.5,24.5 1.8,48.2 0.3,46.7"/>
+        </svg>
+        </a>
     </header>
 
 
@@ -295,5 +372,12 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/minify.js"></script>
         <!-- endbuild -->
+
+        <!-- acá llamo el plugin para TIPSO -->
+        <script src="scripts/tipso/tipso.js"></script>
+        <script>
+            $('.tipso').tipso();
+        </script>
+
 </body>
 </html>

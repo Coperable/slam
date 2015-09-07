@@ -26,6 +26,22 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'profile-view'
+      })
+      .when('/foro', {
+        templateUrl: 'views/foro.html',
+        controller: 'foro-view'
+      })
+      .when('/revista', {
+        templateUrl: 'views/revista.html',
+        controller: 'revista-view'
+      })
+      .when('/torneo', {
+        templateUrl: 'views/torneo.html',
+        controller: 'torneo-view'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',

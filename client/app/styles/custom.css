@@ -565,7 +565,7 @@ nav {
 
 .navbar-nav>li>a {
 
-    font-size: 18px;
+    font-size: 18pt;
 
     font-weight: 300;
 
@@ -593,174 +593,9 @@ nav {
 
 /*------------  Home settings: full screen image & descriptins; ------------ */
 
-.carousel,
 
-.item,
 
-.active {
 
-    height: 100%;
-
-}
-
-.carousel-inner {
-
-    height: 100%;
-
-}
-
-/* Background images are set within the HTML using inline CSS, not here */
-
-.fill,
-
-.fill_mask {
-
-    min-height: 400px;
-
-}
-
-.fill {
-
-    width: 100%;
-
-    height: 100%;
-
-    background-position: center;
-
-    -webkit-background-size: cover;
-
-    -moz-background-size: cover;
-
-    background-size: cover;
-
-    -o-background-size: cover;
-
-}
-
-.fill_mask {
-
-    width: 100%;
-
-    height: 100%;
-
-    background-repeat: repeat;
-
-    position: absolute;
-
-    top: 0;
-
-    display: table;
-
-    text-align: center;
-
-}
-
-.description {
-
-    display: table-cell;
-
-    vertical-align: middle;
-
-    margin-left: auto;
-
-    margin-right: auto;
-
-}
-
-#home_slider .left_arrow,
-
-#home_slider .right_arrow {
-
-    top: 45%;
-
-}
-
-.description h2 {
-
-    font-size: 60px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 17px;
-
-    font-weight: 100;
-
-    display: block;
-
-    width: 90%;
-
-    margin: 0 auto;
-
-}
-
-.description h3 {
-
-    font-size: 40px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 17px;
-
-    font-weight: 100;
-
-    display: block;
-
-    width: 90%;
-
-    margin: 0 auto;
-
-}
-
-.description #clock {
-
-    font-size: 70px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 17px;
-
-    font-weight: 100;
-
-    display: block;
-
-    width: 90%;
-
-    margin: 0 auto;
-
-}
-
-
-.details {
-
-    font-size: 18px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 5px;
-
-    font-weight: 700;
-
-    display: inline-block;
-
-    margin-right: 15px;
-
-}
-
-.details .fa,
-
-.details p {
-
-    display: inline-block;
-
-    vertical-align: middle;
-
-}
-
-.details p {
-
-    padding-top: 10px;
-
-}
 
 @-moz-document url-prefix() {
 
@@ -943,21 +778,7 @@ nav {
 
 }
 
-.tabs_about {
 
-    -webkit-background-size: cover;
-
-    -moz-background-size: cover;
-
-    -o-background-size: cover;
-
-    background-size: cover;
-
-    font-weight: 100;
-
-    text-align: center;
-
-}
 
 .contact {
 
@@ -991,27 +812,7 @@ nav {
 
 /*------------  About ------------ */
 
-.tabs_about ul {
 
-    list-style: none;
-
-    padding-left: 0;
-
-}
-
-.tabs_about li {
-
-    display: inline-block;
-
-}
-
-.tabs_about a {
-
-    margin-left: -3px;
-
-    margin-right: -4px;
-
-}
 
 .stats li {
 
@@ -1045,7 +846,7 @@ nav {
 
     letter-spacing: 1px;
 
-    padding-left: 5px;
+    padding-left: 20px;
 
 }
 
@@ -2794,11 +2595,7 @@ a.contact_icon {
 
     }
 
-    .eventime_modal .modal-dialog.img-dialog {} .description h2 {
-
-        font-size: 40px;
-
-    }
+    .eventime_modal .modal-dialog.img-dialog {} 
 
     .description h3 {
 
@@ -2808,7 +2605,7 @@ a.contact_icon {
 
         letter-spacing: 5px;
 
-}
+    }
 
     .description #clock {
 
@@ -2820,7 +2617,7 @@ a.contact_icon {
 
         font-weight: 100;
 
-}
+    }
 
     .details {
 
@@ -3039,44 +2836,6 @@ a.contact_icon {
 
 @media (max-width: 600px) {
 
-    .description h2 {
-
-        font-size: 28px;
-
-        letter-spacing: 10px;
-
-    }
-
-    .description h3 {
-
-        font-size: 20px;
-
-        text-transform: uppercase;
-
-        letter-spacing: 5px;
-
-}
-
-    .description #clock {
-
-        font-size: 30px;
-
-        text-transform: uppercase;
-
-        letter-spacing: 10px;
-
-        font-weight: 100;
-
-}
-
-    .details {
-
-        font-size: 15px;
-
-        letter-spacing: 2px;
-
-    }
-
     .stats li {
 
         display: block;
@@ -3290,14 +3049,6 @@ a.contact_icon {
     .menu_tabs {
 
         padding-left: 0;
-
-    }
-
-    .description h2 {
-
-        font-size: 20px;
-
-        letter-spacing: 2px;
 
     }
 
