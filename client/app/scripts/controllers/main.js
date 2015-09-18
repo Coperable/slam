@@ -8,8 +8,9 @@
  * Controller of the slamApp
  */
 angular.module('slamApp')
-.controller('MainCtrl', function ($scope) {
+.controller('MainCtrl', function ($scope, $rootScope) {
 
+	$rootScope.home_page = true;
     $scope.setup_components = function() {
         setTimeout(function() {
             $("#home_slider_2").carousel({
@@ -19,17 +20,28 @@ angular.module('slamApp')
     };
 
     $scope.setup_components();
+	$scope.participantes = 25;
+	$scope.torneos = 10;
+
+	$scope.changeLocalidad = function(localidad) {
+		$scope.participantes = 60;	
+		$scope.torneos = 30;	
+	};
 })
-.controller('revista-view', function ($scope) {
+.controller('revista-view', function ($scope, $rootScope) {
+	$rootScope.home_page = false;
 
 })
-.controller('torneo-view', function ($scope) {
+.controller('torneo-view', function ($scope, $rootScope) {
+	$rootScope.home_page = false;
 
 })
-.controller('foro-view', function ($scope) {
+.controller('foro-view', function ($scope, $rootScope) {
+	$rootScope.home_page = false;
 
 })
-.controller('profile-view', function ($scope) {
+.controller('profile-view', function ($scope, $rootScope) {
+	$rootScope.home_page = false;
 
 });
 

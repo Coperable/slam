@@ -2,27 +2,37 @@
 <html>
 
 <head>
+
     <meta charset="utf-8">
+
     <title></title>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="description" content="">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/tipso/src/tipso.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,700,300' rel='stylesheet' type='text/css'>
+    
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
+    
     <link rel="stylesheet" href="styles/custom.css">
+    
     <link rel="stylesheet" href="styles/colors.css">
+    
     <link rel="stylesheet" href="styles/main.css">
+    
     <link rel="stylesheet" href="styles/slam.css">
-
-    <!-- TIPSO: jquery para hacer tooltips: -->
-    <link rel="stylesheet" href="scripts/tipso/tipso.css">
 
     <!-- FONTELLO: fuente de íconos: -->
     <link rel="stylesheet" href="fonts/fontello/css/animation.css">
@@ -41,74 +51,154 @@
     <![endif]-->
 
     <div id="preloader">
+    
         <div class="pre_container">
+    
             <div class="loader">
+    
             </div>
+    
         </div>
+    
     </div>
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-fixed-top nav_mask">
+    
         <div class="navi_container">
+    
             <div class="navbar-header">
+    
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    
                     <span class="sr-only">
                         Toggle navigation 
                     </span>
+    
                     <span class="icon-bar">
                     </span>
+                    
+                    <span class="icon-bar">
+                    
+                    </span>
+                    
                     <span class="icon-bar">
                     </span>
-                    <span class="icon-bar">
-                    </span>
+                
                 </button>
+                
                 <a class="navbar-brand" ng-href="/">
+                
                     <i class="icono icon-slam-logo04 icono-3x logo-nav"></i>
+                
                 </a>
+
             </div>
+            
             <div id="navbar" class="navbar-collapse collapse">
+            
                 <ul class="nav navbar-nav">
+            
                     <li>
-                        <a href="#about_menu">
+            
+                        <a href="#about_menu" data-toggle="tooltip" data-placement="bottom" title="Localidades">
+            
                             <i class="icon-mapacoperable"></i>
+            
                         </a>
+            
                     </li>
+                    
+                    <li class="barra-hor">|</li>
+                    
                     <li>
-                        <a href="#schedule_menu">
+                    
+                        <a href="#schedule_menu" data-toggle="tooltip" data-placement="bottom" title="Torneos">
+                    
                         <i class="icon-copa"></i> </a>
+                    
                     </li>
+                    
                     <li>
-                        <a href="#speakers_menu">
+                    
+                        <a href="#speakers_menu" data-toggle="tooltip" data-placement="bottom" title="Jugadores">
+                    
                         <i class="icon-jugador"></i> </a>
+                    
                     </li>
+
                     <li>
-                        <a ng-href="/profile">
-                        <i class="fa fa-user"></i> </a>
+                    
+                        <a href="#past_menu" data-toggle="tooltip" data-placement="bottom" title="Videos">
+                    
+                        <i class="icon-video"></i> </a>
+                    
                     </li>
+
+                    <!-- <li class="barra-hor">|</li> -->
+                    
                     <li>
-                        <a ng-href="/foro">
-                        <i class="fa fa-question"></i> </a>
+
+                        <a ng-href="/foro" data-toggle="tooltip" data-placement="bottom" title="Notificaciones">
+                    
+                        <i class="icon-notificacion"></i> </a>
+                    
                     </li>
+
+                    <li>
+                    
+                        <a class="usr-menu" href="">karlhutt <i class="fa fa-sort-down"></i></a>
+
+                    </li>
+
+                    <li>
+
+                        <a ng-href="/revista" data-toggle="tooltip" data-placement="bottom" title="Revista">
+                    
+                        <i class="icon-revista"></i> </a>
+                    
+                    </li>
+                    
+                    <li>
+
+                        <a ng-href="/foro" data-toggle="tooltip" data-placement="bottom" title="Foro">
+                    
+                        <i class="fa fa-comment"></i> </a>
+                    
+                    </li>
+
+
+
+
+
+                    <!--
+                    
                     <li>
                         <a ng-href="/torneo">
                         <i class="fa fa-question"></i> </a>
                     </li>
                     <li>
-                        <a ng-href="/revista">
+                        <a ng-href="/profile">
                         <i class="fa fa-question"></i> </a>
                     </li>
+
                     <li>
                         <a href="#contact_menu">
-                        <i class="fa fa-question"></i> </a>
+                        <i class="fa fa-contact"></i> </a>
                     </li>
+
+                    -->
+
                 </ul>
+
+
             </div>
             <!--/.nav-collapse -->
         </div>
         <!--/.nav-collapse -->
     </nav>
 
-    <header id="home_slider" class="carousel slide">
+    <header id="home_slider" class="carousel slide" ng-show="home_page">
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             
@@ -123,7 +213,7 @@
                         <img class="logo-principal" src="images/slam-LOGO.png"> </h2>
                         <div class="details wow fadeInUp">
                             <p>
-                                <span class="left tipso_style" data-tipso="This is a left TIPSO!">Argentina</span>
+                                Argentina
                             </p>
                         </div>
                         <div class="buttons ">
@@ -187,7 +277,7 @@
                     <h3>Mariana Bugallo</h3>
                     <div class="buttons">
                         <a class="wow fadeInUp btn eventime_button" href="#speakers_menu" role="button">
-                        Participantes! </a>
+                        Jugadores! </a>
                     </div>
                 </div>
             </div>
@@ -208,7 +298,7 @@
                     <h3>MHORIS EMM</h3>
                     <div class="buttons">
                         <a class="wow fadeInUp btn eventime_button" href="#speakers_menu" role="button">
-                        Participantes! </a>
+                        Jugadores! </a>
                     </div>
                 </div>
             </div>
@@ -254,66 +344,92 @@
     <div ng-view=""></div>
 
     <footer>
-        <div class="mini_gap">
-        </div>
-        <div class="first_line">
-        </div>
+        <!--
+        <div class="mini_gap"></div>
+        
+        <div class="first_line"></div>
+        
         <div class="first_title">
             <p>
                 Sponsors
             </p>
         </div>
+        
         <div class="first_description">
             <p>
                 Annual Design Days Conference is brought to you by:
             </p>
         </div>
-        <div class="gap">
-        </div>
+        
+        <div class="gap"></div>
+        
         <div class="sponsor_box">
+        
             <div class="sponsor_featured wow fadeIn">
-                <div class="image_featured">
-                </div>
+        
+                <div class="image_featured"></div>
             </div>
+            
             <div class="sponsor_featured wow fadeIn">
-                <div class="image_featured">
-                </div>
+            
+                <div class="image_featured"></div>
+            
             </div>
+            
             <div class="sponsor_basic wow fadeIn">
-                <div class="image_featured">
-                </div>
+            
+                <div class="image_featured"></div>
+            
             </div>
+            
             <div class="sponsor_basic wow fadeIn">
-                <div class="image_featured">
-                </div>
+            
+                <div class="image_featured"></div>
+            
             </div>
+            
             <div class="sponsor_basic wow fadeIn">
-                <div class="image_featured">
-                </div>
+            
+                <div class="image_featured"></div>
+            
             </div>
+            
             <div class="sponsor_basic wow fadeIn">
-                <div class="image_featured">
-                </div>
+            
+                <div class="image_featured"></div>
+            
             </div>
+            
             <div class="sponsor_basic wow fadeIn">
-                <div class="image_featured">
-                </div>
+            
+                <div class="image_featured"></div>
+            
             </div>
+
             <div class="sponsor_basic wow fadeIn">
-                <div class="image_featured">
-                </div>
+            
+                <div class="image_featured"></div>
+            
             </div>
+
             <div class="sponsor_basic wow fadeIn">
-                <div class="image_featured">
-                </div>
+            
+                <div class="image_featured"></div>
+            
             </div>
+
             <div class="sponsor_basic wow fadeIn">
-                <div class="image_featured">
-                </div>
+            
+                <div class="image_featured"></div>
+            
             </div>
+
         </div>
-        <div class="gap">
-        </div>
+
+        <div class="gap"></div>
+
+        -->
+
         <div class="footer wow fadeIn">
             <a class="link" href="#">Sitemap</a>
             <span class="link">|</span>
@@ -363,6 +479,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/tipso/src/tipso.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -373,11 +490,13 @@
         <script src="scripts/minify.js"></script>
         <!-- endbuild -->
 
-        <!-- acá llamo el plugin para TIPSO -->
-        <script src="scripts/tipso/tipso.js"></script>
-        <script>
-            $('.tipso').tipso();
-        </script>
+    <script type="text/javascript">
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip({
+		trigger: 'hover'
+		});
+        })
+    </script>
 
 </body>
 </html>
