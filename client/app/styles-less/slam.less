@@ -78,7 +78,6 @@ PÁGINAS INTERNAS:
 @color-gris: 		#838383;
 @color-dark: 		#000;
 
-<<<<<<< HEAD
 
 @color-celeste: 	#37abc8;
 @color-rojo:		#ea3522;
@@ -111,13 +110,6 @@ PÁGINAS INTERNAS:
     src:  url('../fonts/raleway/Raleway-Medium.woff') format('woff'), 
           url('../fonts/raleway/Raleway-Medium.ttf')  format('truetype');
 }
-=======
-
-@color-celeste: 	#37abc8;
-@color-rojo:		#ea3522;
-@color-verde:		#81c547;
-@color-amarillo:	#ffdd19;
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
 @font-face {
     font-family: 'raleway-light';
@@ -126,17 +118,7 @@ PÁGINAS INTERNAS:
 }
 
 
-<<<<<<< HEAD
 
-=======
-/*----------------------------------------------------------------------
- 
-	01.
-	FUENTES e ÍCONOS
-
---------------------------------------------------------------------- */
-
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 //fuente para ÍCONOS
 @font-face {
 
@@ -231,10 +213,6 @@ body {
 // --------------------------- TOOLTIPS --------------------------------
 
 .tooltip.bottom .tooltip-arrow {
-<<<<<<< HEAD
-
-  	top: 0;
-=======
 
   	top: 0;
 
@@ -248,32 +226,8 @@ body {
 
   	opacity: 0.9;
 }
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
-  	left: 50%;
 
-<<<<<<< HEAD
-  	margin-left: -5px;
-
-  	border-bottom-color: @color-principal;
-
-  	border-width: 0 5px 5px;
-
-  	opacity: 0.9;
-}
-=======
-.tooltip-inner {
-
-	color: @color-principal;
-
-	background: @color-light;
-
-	border: solid 1px @color-principal;
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
-
-	opacity: 0.9;
-
-<<<<<<< HEAD
 .tooltip-inner {
 
 	color: @color-principal;
@@ -283,24 +237,9 @@ body {
 	border: solid 1px @color-principal;
 
 	opacity: 0.9;
-=======
-	padding: 0.4em 1em;
-
-	font-family: raleway;
-
-	text-transform: uppercase;
-
-	letter-spacing: 2px;
-
-	font-weight: 400;
-
-	font-size: 10pt;
-}
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
 	padding: 0.4em 1em;
 
-<<<<<<< HEAD
 	font-family: raleway;
 
 	text-transform: uppercase;
@@ -324,34 +263,9 @@ body {
         display: inline-table;
 
     }
-=======
 
-// -------------------------- BOTONES -----------------------------------
+}
 
-.eventime_button,
-
-.reservation_button {
-
-    border-width: 3px;
-
-    border-style: solid;
-
-    border-radius: 0;
-
-    font-weight: 700;
-
-    font-size: 18px;
-
-    padding: 10px 25px;
-
-    letter-spacing: 3px;
-
-    margin: auto 20px;
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
-
-    overflow: hidden;
-
-<<<<<<< HEAD
 // LÍNEA DEBAJO DE LOS TÍUTLOS
 .first_line {
 
@@ -368,29 +282,9 @@ body {
     border-left: none;
 
     border-right: none;
-=======
-    -webkit-backface-visibility: hidden;
-
-    -moz-osx-font-smoothing: grayscale;
-
-    position: relative;
-
-    z-index: 999;
-
-    text-transform: uppercase;
-
-    -webkit-transition: all .2s ease-in-out;
-
-    -moz-transition: all .2s ease-in-out;
-
-    -o-transition: all .2s ease-in-out;
-
-    transition: all .2s ease-in-out;
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
     display: inline-block;
 
-<<<<<<< HEAD
     float: left;
 
 }
@@ -519,126 +413,10 @@ body {
         }
     }
 }
-=======
-.eventime_button,
 
-.reservation_button {
 
-    overflow: hidden;
 
-    width: 245px;
 
-    -webkit-transition: border-color 0.3s, color 0.3s;
-
-    transition: border-color 0.3s, color 0.3s;
-
-    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-
-    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-
-    z-index: 999;
-
-}
-
-.eventime_button::before {
-
-    content: '';
-
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
-
-    width: 150%;
-
-    height: 100%;
-
-    z-index: -1;
-
-    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
-
-    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
-
-    -webkit-transform-origin: 0% 100%;
-
-    transform-origin: 0% 100%;
-
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
-
-    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
-
-}
-
-.eventime_button:hover::before {
-
-    opacity: 1;
-
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-
-    transform: rotate3d(0, 0, 1, 0deg);
-
-    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-
-    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-
-}
-
-
-// --------------------------- OTROS -----------------------------------
-
-.gap {
-
-    height: 50px;
-
-    clear: both;
-
-}
-
-.mini_gap {
-
-    height: 25px;
-
-    clear: both;
-
-}
-
-.antigap {
-
-    margin-bottom: -20px;
-
-    clear: both;
-
-}
-
-.clear {
-
-    clear: both;
-
-}
-
-
-
-
-
-
-
-
-
-
-/*----------------------------------------------------------------------
- 
-	03.
-	PRELOADER
-
---------------------------------------------------------------------- */
-
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
-
-
-
-
-<<<<<<< HEAD
 // -------------------------- BOTONES -----------------------------------
 
 .eventime_button,
@@ -658,36 +436,11 @@ body {
     padding: 10px 25px;
 
     letter-spacing: 3px;
-=======
-
-
-/*----------------------------------------------------------------------
- 
-	04.
-	HEADER 
-
---------------------------------------------------------------------- */
-
-
-// -------------------------- NAVBAR -----------------------------------
-
-.logo-nav {
-
-	margin-top: -20px;
-
-}
-
-
-.eventime_button {
-	border-radius: 0.4em;
-}
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
     margin: auto 20px;
 
     overflow: hidden;
 
-<<<<<<< HEAD
     -webkit-backface-visibility: hidden;
 
     -moz-osx-font-smoothing: grayscale;
@@ -695,17 +448,9 @@ body {
     position: relative;
 
     z-index: 999;
-=======
-/* ! Navigation Settings */
 
-.navi_container {
+    text-transform: uppercase;
 
-    width: 84%;
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
-
-    margin-left: 8%;
-
-<<<<<<< HEAD
     -webkit-transition: all .2s ease-in-out;
 
     -moz-transition: all .2s ease-in-out;
@@ -731,43 +476,11 @@ body {
     -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-=======
-
-    .indicador-pais {
-
-    	position: absolute;
-
-    	top: 0px;
-
-    	left: 3%;
-
-    	font-size: 50pt;
-
-    	font-weight: 300;
-
-    	padding-top: 0px;
-
-    	//opacity: 0.5;
-
-    }
-
-    .usr-menu {
-
-    	font-size: 10pt 
-
-    }
-
-    .nav > li > a {
-
-    		padding: 21px 6px 15px 6px !important;	
-    		
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
     z-index: 999;
 
 }
 
-<<<<<<< HEAD
 .eventime_button::before {
 
     content: '';
@@ -779,25 +492,9 @@ body {
     left: 0;
 
     width: 150%;
-=======
-.navbar{
-
-    border-radius: 0;
-
-    .barra-hor {
-
-    	font-size: 18pt;
-
-    	font-weight: 300;
-
-    	padding-top: 16px;
-
-    }
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
     height: 100%;
 
-<<<<<<< HEAD
     z-index: -1;
 
     -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
@@ -858,73 +555,9 @@ body {
 .clear {
 
     clear: both;
-=======
-.navbar-nav>.active>a,
-
-.navbar-nav>li>a:hover {
-
-    background-color: transparent !important;
 
 }
 
-#navbar {
-
-    float: right;
-
-}
-
-nav {
-
-    z-index: 2000;
-
-}
-
-.navbar,
-
-.navbar a {
-
-    text-transform: uppercase;
-
-    outline: none;
-
-}
-
-.navbar a {
-
-    -webkit-transition: all 1s ease-in-out;
-
-    -moz-transition: all 1s ease-in-out;
-
-    -o-transition: all 1s ease-in-out;
-
-    transition: all 1s ease-in-out;
-
-}
-
-.nav > li > a:focus,
-
-.nav > li > a:hover {
-
-    background: none;
-
-}
-
-.navbar-brand {
-
-    font-size: 25px;
-
-    font-weight: 300;
-
-    margin-top: 5px;
-
-}
-
-.nav_mask {
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
-
-    min-height: 59px;
-
-<<<<<<< HEAD
 
 
 
@@ -1159,75 +792,6 @@ nav {
 
 .fill_mask {
 
-=======
-    padding-top: 0;
-
-}
-
-.navbar-nav>li>a {
-
-    font-size: 18pt;
-
-    font-weight: 300;
-
-    padding: 1px;
-
-}
-
-.navbar_bg {
-
-    -webkit-transition: all 0.5s ease;
-
-    -moz-transition: all 0.5s ease;
-
-    -o-transition: all 0.5s ease;
-
-    transition: all 0.5s ease;
-
-}
-
-.navbar-toggle {
-
-    margin-top: 12px;
-
-}
-
-
-
-
-
-
-// -------------------------- SLIDER -----------------------------------
-
-#home_slider {
-	.left_arrow, .right_arrow {
-    	top: 45%;
-    }
-}
-
-.carousel,
-
-.item,
-
-.active {
-
-    height: 100%;
-
-}
-
-.carousel-inner {
-
-    height: 100%;
-
-}
-
-/* Background images are set within the HTML using inline CSS, not here */
-
-.fill,
-
-.fill_mask {
-
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
     min-height: 400px;
 
 }
@@ -1253,20 +817,6 @@ nav {
 .fill_mask {
 
     width: 100%;
-<<<<<<< HEAD
-
-    height: 100%;
-
-    background-repeat: repeat;
-
-    position: absolute;
-
-    top: 0;
-
-    display: table;
-
-    text-align: center;
-=======
 
     height: 100%;
 
@@ -1446,7 +996,6 @@ nav {
 	    padding-top: 10px;
 	
 	}
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
 	@media (max-width: 600px) {
 
@@ -1458,184 +1007,6 @@ nav {
 
 }
 
-<<<<<<< HEAD
-// ??? todavía no entiendo para qué es esta clase ???
-.slide {
-}
-
-.description {
-
-    display: table-cell;
-
-    vertical-align: middle;
-
-    margin-left: auto;
-
-    margin-right: auto;
-
-	h2 {
-
-	    font-size: 60px;
-
-	    text-transform: uppercase;
-
-	    letter-spacing: 17px;
-
-	    font-weight: 400;
-
-	    display: block;
-
-	    width: 90%;
-
-	    margin: 0 auto;
-
-	    @media (max-width: 600px) {
-
-	        font-size: 28px;
-
-	        letter-spacing: 10px;
-
-	    }
-
-	    @media (max-width: 400px) {
-
-	        font-size: 20px;
-
-	        letter-spacing: 2px;
-
-	    }
-
-	    @media (max-width: 992px) {
-
-        	font-size: 40px;
-
-    	}
-
-	}
-
-	h3 {
-
-	    font-size: 40px;
-
-	    text-transform: uppercase;
-
-	    letter-spacing: 17px;
-
-	    font-weight: 100;
-
-	    display: block;
-
-	    width: 90%;
-
-	    margin: 0 auto;
-
-	    @media (max-width: 600px) {
-
-	        font-size: 20px;
-
-	        text-transform: uppercase;
-
-	        letter-spacing: 5px;
-
-		}
-
-	}
-
-	blockquote {
-
-		max-width: 800px;
-
-    	text-transform: none;
-
-    	letter-spacing: 2px;
-
-    	font-size: 19px;
-	}
-
-	#clock {
-
-	    font-size: 70px;
-
-	    text-transform: uppercase;
-
-	    letter-spacing: 17px;
-
-	    font-weight: 100;
-
-	    display: block;
-
-	    width: 90%;
-
-	    margin: 0 auto;
-
-	    @media (max-width: 600px) {
-
-	        font-size: 30px;
-
-	        text-transform: uppercase;
-
-	        letter-spacing: 10px;
-
-	        font-weight: 100;
-
-		}
-
-	}
-
-	.logo-principal {
-
-		max-width: 450px;
-
-		width: 50%;
-
-		//margin-left: 80px;
-
-	}
-}
-
-
-.details {
-
-    font-size: 18px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 5px;
-
-    font-weight: 700;
-
-    display: inline-block;
-
-    margin-right: 15px;
-
-	.fa, p {
-
-	    display: inline-block;
-
-	    vertical-align: middle;
-
-	}
-
-	p {
-	
-		font-weight: 300;
-
-	    padding-top: 10px;
-	
-	}
-
-	@media (max-width: 600px) {
-
-        font-size: 15px;
-
-        letter-spacing: 2px;
-
-    }
-
-}
-
-=======
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
 
 
@@ -1884,16 +1255,11 @@ nav {
     	text-decoration: none;
     }
 
-<<<<<<< HEAD
     .caption.selected {
-=======
-    .caption-selected {
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
     	background: @color-light;
 
     	padding: 3px 20px 30px 20px;
-<<<<<<< HEAD
 
         color: @color-principal;
 
@@ -1945,8 +1311,11 @@ nav {
 
         }
 
-=======
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
+    }
+
+    .caption.anterior {
+
+        
     }
 
     .caption {
@@ -2942,11 +2311,7 @@ footer,
 
 	.tabs_about .active a,
 
-<<<<<<< HEAD
 	.mask .titulo,
-=======
-	.mask .first_title,
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
 	.mask .first_description,
 
@@ -2989,11 +2354,7 @@ footer,
 
 	.tabs_about .active a,
 
-<<<<<<< HEAD
 	.mask .titulo,
-=======
-	.mask .first_title,
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
 	.mask .first_description,
 
@@ -3061,11 +2422,7 @@ footer,
 
 	a:hover,
 
-<<<<<<< HEAD
 	.titulo,
-=======
-	.first_title,
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
 	.panel a,
 
@@ -3095,11 +2452,7 @@ footer,
 
 	a:hover,
 
-<<<<<<< HEAD
 	.titulo,
-=======
-	.first_title,
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
 	.panel a,
 
@@ -3265,7 +2618,6 @@ footer .first_line,
 
 
 
-<<<<<<< HEAD
 /*----------------------------------------------------------------------
  
     20.
@@ -4038,9 +3390,6 @@ label {
 
 
 */
-=======
-
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 
 
 
