@@ -24,6 +24,7 @@ module.exports = function(config) {
       // bower:js
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
+      'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-aria/angular-aria.js',
       'bower_components/angular-cookies/angular-cookies.js',
@@ -32,14 +33,6 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
-<<<<<<< HEAD
-      'bower_components/bootstrap/dist/js/bootstrap.js',
-      'bower_components/moment/moment.js',
-      'bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js',
-      'bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
-=======
-      'bower_components/tipso/src/tipso.min.js',
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",
