@@ -9,6 +9,9 @@
 
 module.exports = function (grunt) {
 
+  // Load grunt tasks automatically
+  require('load-grunt-tasks')(grunt);
+
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
@@ -22,7 +25,8 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
+    dist: 'dist',
+    deploy: '../public'
   };
 
   // Define the configuration for all the tasks
@@ -31,6 +35,7 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+    cnf: grunt.file.readJSON('config.json'),
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -56,7 +61,6 @@ module.exports = function (grunt) {
             files: ["<%= yeoman.app %>/styles-less/{,*/}*.less"],
             tasks: ["less:server"]
         },
-
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -404,6 +408,8 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'images/{,*/}*.{webp}',
+            'views/{,*/}*.*',
+            'resources/{,*/}*.*',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
@@ -417,6 +423,26 @@ module.exports = function (grunt) {
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
         }]
+      },
+      deploy: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.dist%>',
+          dest: '<%= yeoman.deploy%>',
+          src: [
+            '*.{ico,png,txt}',
+            '.htaccess',
+            '*.html',
+            'images/{,*/}*.{webp}',
+            'resources/{,*/}*.*',
+            'scripts/{,*/}*.*',
+            'styles/{,*/}*.*',
+            'bower_components/{,*/}*.*',
+            'styles/fonts/{,*/}*.*'
+          ]
+        }
+        ]
       },
       styles: {
         expand: true,
@@ -443,6 +469,24 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
+
+    ngconstant: {
+        options: {
+            name: 'config',
+            dest: '<%= yeoman.app %>/scripts/config.js',
+            wrap: '"use strict";\n\n{%= __ngModule %}',
+            space: '  ',
+            constants: {
+                api_host: '<%= cnf.api_host %>'
+            },
+            values: {
+                debug: true
+            }
+        },
+        build: {
+        }
+    },
+
 
     // Test settings
     karma: {
@@ -485,6 +529,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'ngconstant',
     'less',
     'wiredep',
     'useminPrepare',
@@ -499,7 +544,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'copy:deploy'
   ]);
 
   grunt.registerTask('default', [
