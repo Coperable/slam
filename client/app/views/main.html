@@ -326,17 +326,13 @@
 
 
 <!-- SCHEDULE -->
-<div id="schedule_menu" class="sec-fondo-claro">
+<div id="torneo_seccion" class="sec-fondo-claro">
 
 	<div class="gap"></div>
 	  
 	<div class="first_line wow fadeInDown"></div>
 
-<<<<<<< HEAD
 	<div class="titulo">
-=======
-	<div class="first_title">
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 	    
 		<p class="wow fadeInDown">
 	       TORNEOS
@@ -367,33 +363,32 @@
 	-Habría que esconder TODO ESTO y mostrar un carousel IGUALITO pero con UN SOLO ITEM dentro del ACTIVE! 
 
 	-->
-    <div id="carousel-torneos" class="carousel slide">
+    <div id="carousel-torneos" class="carousel slide" data-ride="carousel">
 
-        <div class="carousel-inner">
+        <div class="carousel-inner" role="listbox">
 
             <div class="item active">
 
                 <div class="row wow fadeInLeft">
                     
-                    <div class="col-md-3">
+                	<a href="">
 
-                    	<div class="caption" fecha="25 MAR">
+	                    <div class="col-md-3">
 
-                    		<a class="clickable-torneo" href="">
+	                    	<div class="caption anterior" fecha="25 MAR">
                          	
 	                         	<h4>Torneo de apertura - Slam!</h4>
 	                        	
 	                        	<p><i class="fa fa-map-marker"></i><small> Oreja Negra - Uriarte 8877</small></p>
-	                            
-                          	</a>
 
-                        </div>
+                        	</div>
 
-                    </div>
+                    	</div>
+
+                    </a>
                     
                     <div class="col-md-3">
 
-<<<<<<< HEAD
                     	<div class="caption selected" fecha="25JUL">
 
                     		<a class="clickable-torneo" href="">
@@ -401,15 +396,6 @@
 	                         	<h4>6to Slam de Poesía de Rosario</h4>
 	                        	
 	                        	<p><i class="fa fa-map-marker"></i><small>Oreja Negra - Uriarte 873</small></p>
-=======
-                    	<div class="caption-selected" fecha="25JUL">
-
-                    		<a class="clickable-torneo" href="">
-                         	
-	                         	<h4>SLAM QUERTY</h4>
-	                        	
-	                        	<p><i class="fa fa-map-marker"></i><small> Oreja Negra - Uriarte 873</small></p>
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 	                            
                           	</a>
 
@@ -455,7 +441,7 @@
 
             <div class="item">
 
-                <div class="row">
+                <div class="row wow fadeInLeft">
                     
                     <div class="col-md-3">
 
@@ -479,9 +465,9 @@
 
                     		<a class="clickable-torneo" href="">
                          	
-	                         	<h4>Torneo de apertura - Slam!</h4>
+	                         	<h4>6to Slam de Poesía de Rosario</h4>
 	                        	
-	                        	<p><i class="fa fa-map-marker"></i><small> Oreja Negra - Uriarte 8877</small></p>
+	                        	<p><i class="fa fa-map-marker"></i><small>Oreja Negra - Uriarte 873</small></p>
 	                            
                           	</a>
 
@@ -525,207 +511,53 @@
             
             </div>
 
-            <div class="gap"></div>
+	        <div class="gap"></div>
 
-	        <div class="panel-info-torneo wow fadeInDown">
+			<div id="torneo-descripcion" class="resumen">
 
-	        	<p></br></p>
-	        	<img src="/images/prototipo-info-evento.png" width="100%">
+				<div class="row">
 
-		        
-	        	<!--
+					<div class="col-md-8">
 
-		        <div id="accordion1">
+						<div class="datos-generales">
 
-	              <div class="panel wow fadeInDown">
+							<h1 class="wow fadeInLeft">6to Slam de Poesía Oral Rosario</h1>
 
-	                <a data-toggle="collapse" data-parent="#accordion1" href="#one_one">
-	                <div class="accordion_left">
-	                  <div class="accordions_titles_small">
-	                    <p class="accordion_date">
-	                       9:00-9:30 a.m.
-	                    </p>
-	                  </div>
-	                </div>
-	                <div class="accordion_right">
-	                  <div class="accordions_titles_small">
-	                    <div class="accordion_description">
-	                      <p>
-	                         Registration
-	                      </p>
-	                    </div>
-	                  </div>
-	                </div>
-	                </a>
-	              </div>
-	              <div id="one_one" class="panel-collapse collapse accordion_full">
-	                <p>
-	                   All visitors should complain datas before conference.<br>
-	                  <b>Venue:</b> Main Conference Reception
-	                </p>
-	              </div>
-	              
+							<div class="wow fadeInLeft afiche">
 
-	              <div class="mini_gap">
-	              </div>
-	              <div class="panel wow fadeInDown">
-	                <a data-toggle="collapse" data-parent="#accordion1" href="#one_two">
-	                <div class="accordion_left">
-	                  <div class="accordions_titles">
-	                    <p class="accordion_date">
-	                       9:30-11:30 a.m.
-	                    </p>
-	                  </div>
-	                </div>
-	                <div class="accordion_right">
-	                  <div class="accordions_titles">
-	                    <div class="accordion_description">
-	                      <p>
-	                         Great opening of the Design Days Conference
-	                      </p>
-	                      <p class="name">
-	                         Marshall of the New York Design Magazine and Design Days Conferenct project representatives
-	                      </p>
-	                    </div>
-	                  </div>
-	                </div>
-	                </a>
-	              </div>
-	              <div id="one_two" class="panel-collapse collapse accordion_full">
-	                <p>
-	                   Openinig will host invited presentations representing the leading thoughts, new ideas and visions. Speakers will be allocated 30 minutes for presentation and discussion of their paper. <br>
-	                  <br>
-	                  <b>Venue:</b> Main Conference Hall
-	                </p>
-	              </div>
-	              
+								<a href="" ><img src="/images/TORNEOS/6toSlamRosario.png"></a>
 
-	              <div class="mini_gap">
-	              </div>
-	              <div class="panel wow fadeInDown">
-	                <a data-toggle="collapse" data-parent="#accordion1" href="#one_three">
-	                <div class="accordion_left">
-	                  <div class="accordions_titles_big">
-	                    <p class="accordion_date">
-	                       11:30 - 2:00 p.m.
-	                    </p>
-	                  </div>
-	                </div>
-	                <div class="accordion_right">
-	                  <div class="accordions_titles_big">
-	                    <div class="accordion_description">
-	                      <p>
-	                         Typography Workshops
-	                      </p>
-	                      <p class="name">
-	                         Andrew Yang - CEO, Typocorp
-	                      </p>
-	                    </div>
-	                  </div>
-	                </div>
-	                </a>
-	              </div>
-	              <div id="one_three" class="panel-collapse collapse accordion_full">
-	                <p>
-	                   Workshops - By tradition workshop sessions at Design days conference aim to bring together users and experts in interactive, half-day sessions elaborating specific topics. DESIGN 2016 workshops will be organised to promote integration of different views, approaches and methods. Workshop coordinators could invite selected presentations and demonstrations in order to stimulate the debate as well as to propose any format of delivery that inspires interaction. <br>
-	                  <br>
-	                  <b>Venue:</b> Green Hall
-	                </p>
-	              </div>
-	              
+								<div class="slam-indicador"><i class="icon-slam"></i><img src="../images/slam-logo-azul.png"></div>
 
-	              <div class="mini_gap">
-	              </div>
-	              <div class="panel wow fadeInDown">
-	                <a data-toggle="collapse" data-parent="#accordion1" href="#one_four">
-	                <div class="accordion_left">
-	                  <div class="accordions_titles_small">
-	                    <p class="accordion_date">
-	                       2:00-3:30 p.m.
-	                    </p>
-	                  </div>
-	                </div>
-	                <div class="accordion_right">
-	                  <div class="accordions_titles_small">
-	                    <div class="accordion_description">
-	                      <p>
-	                         Lunch brake
-	                      </p>
-	                    </div>
-	                  </div>
-	                </div>
-	                </a>
-	              </div>
-	              <div id="one_four" class="panel-collapse collapse accordion_full">
-	                <p>
-	                  <b>Venue:</b> Summer Cafe
-	                </p>
-	              </div>
-	              
+							</div>
 
-	              <div class="mini_gap">
-	              </div>
-	              <div class="panel wow fadeInDown">
-	                <a data-toggle="collapse" data-parent="#accordion1" href="#one_five">
-	                <div class="accordion_left">
-	                  <div class="accordions_titles">
-	                    <p class="accordion_date">
-	                       10:30-11:30 a.m.
-	                    </p>
-	                  </div>
-	                </div>
-	                <div class="accordion_right">
-	                  <div class="accordions_titles">
-	                    <div class="accordion_description">
-	                      <p>
-	                         Architecture in the Woods
-	                      </p>
-	                      <p class="name">
-	                         Artur Charley - Architect - CEO, Wood projects Ltd
-	                      </p>
-	                    </div>
-	                  </div>
-	                </div>
-	                </a>
-	              </div>
-	              <div id="one_five" class="panel-collapse collapse accordion_full">
-	                <p>
-	                   Workshops - By tradition workshop sessions at Design days conference aim to bring together users and experts in interactive, half-day sessions elaborating specific topics. DESIGN 2016 workshops will be organised to promote integration of different views, approaches and methods. Workshop coordinators could invite selected presentations and demonstrations in order to stimulate the debate as well as to propose any format of delivery that inspires interaction. <br>
-	                  <br>
-	                  <b>Venue:</b> Red Hall
-	                </p>
-	              </div>
-	              <div class="mini_gap">
-	              </div>
-	              <a href="#reservation_menu" class="schedule_reservation wow btn eventime_button  fadeInRight">
-	               Make Reservation
-	              </a>
-	            
-	            </div> -->
+						</div>
 
-	    	</div>
+					</div>
+
+				</div>
+
+	        </div>
 
         </div>
 
-
-
-        <!-- flechas prev y next -->
-		<a class="left_arrow" href="#carousel-localidades" data-slide="prev">
+       	<!-- flechas prev y next -->
+		<a class="left_arrow" href="#carousel-torneos" data-slide="prev">
 	        <svg width="26px" height="48">
 		        <polygon points="3.3,24.5 25.5,2.3 24,0.8 0.3,24.5 24,48.2 25.5,46.7"/>
     	    </svg>
         </a>
-        <a class="right_arrow" href="#carousel-localidades" data-slide="next">
+        <a class="right_arrow" href="#carousel-torneos" data-slide="next">
         	<svg width="26px" height="48">
         		<polygon points="22.5,24.5 0.3,2.3 1.8,0.8 25.5,24.5 1.8,48.2 0.3,46.7"/>
         	</svg>
         </a>
         
         <ol class="carousel-indicators">
-            <li data-target="#carousel-localidades" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-localidades" data-slide-to="1"></li>
-            <li data-target="#carousel-localidades" data-slide-to="2"></li>
-        </ol> 
+            <li data-target="#carousel-torneos" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-torneos" data-slide-to="1"></li>
+            <li data-target="#carousel-torneos" data-slide-to="2"></li>
+        </ol>
 
     </div><!-- End Carousel --> 
 	  
@@ -807,7 +639,6 @@
 				            
 				            <figure class="eventime_img">
 
-<<<<<<< HEAD
 					            <a href="#myModal" data-toggle="modal">
 					            
 					            	<img src="images/IMG-USR01.jpg" alt="img09"/>
@@ -830,41 +661,6 @@
 						        </a>
 				            
 				            </figure>
-=======
-				            <a href="#myModal" data-toggle="modal">
-				            
-				            	<img src="images/IMG-USR01.jpg" alt="img09"/>
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
-
-				            <figure class="eventime_img">
-					            
-					            <img src="images/IMG-USR02.jpg" alt="img10"/>
-					            
-					            <figcaption>
-
-						            <h2>
-<<<<<<< HEAD
-						            	Manuel Tapia 
-=======
-						            	Jorge Solís 
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
-						            </h2>
-
-						            <p>
-<<<<<<< HEAD
-						                * ORGANIZADOR *
-=======
-						                + 4 Torneos
-						            </p>
-
-						            <p>
-						            	<i class="icon-copa"></i>
-						            </p>
-
-					            </figcaption>
-					        </a>
-				            
-				            </figure>
 
 				            <figure class="eventime_img">
 					            
@@ -894,7 +690,6 @@
 						            </h2>
 						            <p>
 						                + 6 Torneos
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 						            </p>
 						            <a href="#myModal" data-toggle="modal">
 						            	View more 
@@ -905,27 +700,6 @@
 
 				            <figure class="eventime_img">
 					            
-<<<<<<< HEAD
-					            <img src="images/IMG-USR03.jpg" alt="img10"/>
-					            
-					            <figcaption>
-						            <h2>
-						            	Martín Cinzano
-						            </h2>
-						            <p>
-						                + 6 Torneos
-						            </p>
-						            <a href="#myModal" data-toggle="modal">
-						            	View more 
-						           	</a>
-					            </figcaption>
-				            
-				            </figure>
-
-				            <figure class="eventime_img">
-					            
-=======
->>>>>>> 401a2bb2a08b3056ce0f0c6e692ecb62c2464985
 					            <img src="images/IMG-USR04.jpg" alt="img10"/>
 					            
 					            <figcaption>

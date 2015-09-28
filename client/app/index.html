@@ -115,7 +115,7 @@
                     
                     <li>
                     
-                        <a href="#schedule_menu" data-toggle="tooltip" data-placement="bottom" title="Torneos">
+                        <a href="#torneo_seccion" data-toggle="tooltip" data-placement="bottom" title="Torneos">
                     
                         <i class="icon-copa"></i> </a>
                     
@@ -322,7 +322,7 @@
                   </p>
                 </div>
                 <div class="buttons">
-                  <a class="wow fadeInUp btn eventime_button" href="#schedule_menu" role="button">
+                  <a class="wow fadeInUp btn eventime_button" href="#torneo_seccion" role="button">
                   schedule</a>
                 </div>
               </div>
@@ -504,6 +504,14 @@
 		      trigger: 'hover'
 
 		    });
+
+            $('#carousel-torneos').carousel({
+
+                interval: 1000,
+
+                wrap: false
+
+            });
 
         })
 
