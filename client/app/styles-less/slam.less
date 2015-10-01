@@ -982,14 +982,6 @@ nav {
 
     margin-right: 15px;
 
-    &.inicial {
-
-        -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-            
-        animation-delay: 1s;
-
-    }
-
 	.fa, p {
 
 	    display: inline-block;
@@ -2412,6 +2404,58 @@ nav {
 
 
 
+/*----------------------------------------------------------------------
+ 
+    20.
+    FOOTER 
+
+--------------------------------------------------------------------- */
+
+
+.creditos {
+
+    padding-bottom: 20px;
+
+    img {
+
+        width: 90px;
+
+    }
+
+    .segunda-linea {
+
+        color: @color-light;
+
+        display: inline-block;
+
+        vertical-align: middle;
+
+        text-align: left;
+
+        margin-left: 20px;
+
+        p {
+
+            margin-bottom: 0px; 
+
+        }
+
+        a {
+
+            color: @color-light;
+
+            font-size: 24pt;
+
+            padding-right: 10px;
+
+            &:hover {
+
+                color: @color-principal;
+            }
+        }
+    }
+}
+
 
 
 
@@ -3452,9 +3496,60 @@ a, a:hover, a:active, a:focus {
 /*----------------------------------------------------------------------
  
     21.
-    TORNEO - PLANILLA para CREAR/EDITAR
+    PLANILLA datos
+
+    la usan: 
+    - TORNEO
+    - REGISTRO
 
 --------------------------------------------------------------------- */
+
+
+
+#planilla-registro {
+
+    padding-bottom: 60px;
+
+    .TIT-centrado i{
+
+        font-size: 16pt;
+
+        padding-right: 10px;
+
+    }
+
+}
+
+.entrada-0s5 {
+
+    -webkit-animation-delay: 0.5s; /* Chrome, Safari, Opera */
+        
+    animation-delay: 0.5s;
+}
+
+.entrada-1s {
+
+    -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+        
+    animation-delay: 1s;
+
+}
+
+.entrada-1s5 {
+
+    -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
+        
+    animation-delay: 1.5s;
+
+}
+
+.entrada-2s {
+
+    -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+        
+    animation-delay: 2s;
+
+}
 
 
 .form-control .separador {
@@ -3496,7 +3591,7 @@ label {
 }
 
 
-#planilla-torneo {
+.planilla {
 
     .eventime_button {
 
@@ -3528,6 +3623,23 @@ label {
 
         border-width: 2px;
 
+    }
+
+    .checkbox {
+
+        label {
+
+            color: @color-dark;
+
+        }
+
+        a {
+
+            color: @color-principal;
+
+            font-family: raleway-semi-bold;
+
+        }
     }
 
 
