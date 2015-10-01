@@ -77,6 +77,7 @@ PÁGINAS INTERNAS:
 @color-fondo: 		#ffffff;
 @color-gris: 		#838383;
 @color-dark: 		#000;
+@color-gris-claro:  #ddd;
 
 
 @color-celeste: 	#37abc8;
@@ -981,6 +982,14 @@ nav {
 
     margin-right: 15px;
 
+    &.inicial {
+
+        -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+            
+        animation-delay: 1s;
+
+    }
+
 	.fa, p {
 
 	    display: inline-block;
@@ -1214,7 +1223,31 @@ nav {
 --------------------------------------------------------------------- */
 
 
+.blanquito {
+
+    background: @color-light;
+
+    position: absolute;
+
+    top: 0;
+
+    height: 30%;
+
+    width: 100%;
+
+    z-index: 998;
+
+    -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+        
+    animation-delay: 1s;
+}
+
 #carousel-torneos {
+
+    a {
+
+        text-decoration: none;
+    }
 
     position: relative;
 
@@ -1242,92 +1275,64 @@ nav {
 
     	top: 6%;
 
-    }
-
-    .clickable-torneo {
-
-    	display: block;
-
-    	width: 100%;
-
-    	height: 100%;
-
-    	text-decoration: none;
-    }
-
-    .caption.selected {
-
-    	background: @color-light;
-
-    	padding: 3px 20px 30px 20px;
-
-        color: @color-principal;
-
-        h4 {
-
-            padding-bottom: 20px;
+        -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
         
-        }
+        animation-delay: 1.5s;
 
-        p {
+        i {
 
-            display: none;
-        
-        }
-
-
-        &::after {
-
-            content: "";
-
-            background-color: transparent;
-
-            color: @color-dark;
-
-            background-image: url("../images/flecha-abajo.png");
-
-            border-radius: 0;
-
-            background-size: 80px 34px;
-
-            left: 10%;
-
-            height: 34px;
-
-            width: 80px;
-
-            //margin-top: -34px;
-
-            //visibility: hidden;
+            font-size: 26pt;
 
         }
 
     }
-
-    .caption.anterior {
-
-        &::after {
-
-            background-color: @color-gris;
-
-            //border: 3px dotted @color-gris;
-
-            //color: @color-gris;
-
-        }
-    }
+    
 
     .caption {
 
-    	background: #ddd;
+    	background-color: @color-gris-claro;
 
-        //border: 3px dashed @color-principal;
+        background-image: url("../images/mask.svg");
     	
-    	border-radius: 0.4em;
+    	border-radius: 0.6em;
     
-    	padding: 3px 20px 30px 20px;
+    	padding: 10px 20px 30px 20px;
 
-    	z-index: 10000;
+        z-index: 999;
+
+        @media (max-width: 992px) {
+
+            font-size: 12pt;
+
+            padding: 8px 8px 20px 10px;
+
+        }
+
+        h4 {
+
+            font-family: raleway-semi-bold;
+
+            margin: 0;
+
+
+            @media (max-width:970px) {
+
+                font-family: raleway-medium;
+
+                font-size: 12pt;
+
+                font-weight: 100;
+
+                //text-transform: uppercase;
+            }
+
+            @media (min-width:970px) and (max-width:1024px) {
+
+                font-size: 12pt;
+
+            }
+
+        }
 
     	&::after {
 
@@ -1343,6 +1348,10 @@ nav {
 
     		font-size: 12pt;
 
+            line-height: 1;
+            
+            word-spacing: 9999999px;
+
     		padding: 15px;
 
     		height: 80px;
@@ -1351,16 +1360,287 @@ nav {
 
     		border-radius: 50%;
 
+            border: 5px solid @color-light;
+
     		text-align: center;
 
     		margin-top: -4px;
 
     		right: 50px;
-
-    		z-index: 10000;
     		
     	}
+
+        &.proximo {
+
+            background: @color-light;
+
+            -webkit-box-shadow:inset 0px 0px 0px 3px @color-principal;
+            -moz-box-shadow:inset 0px 0px 0px 3px @color-principal;
+            box-shadow:inset 0px 0px 0px 3px @color-principal;
+            
+            h4 {
+
+                color: @color-principal;
+                
+            }
+
+        }
+
 	}
+
+    .senialador {
+
+        margin-top: auto;
+
+        margin-bottom: auto;
+
+        height: 100%;
+
+        text-align: center;
+
+        color: @color-dark;
+
+        -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
+        
+        animation-delay: 1.5s;
+
+        h4, h2 {
+
+            display: inline-block;
+
+            vertical-align: middle; 
+
+            margin: 0;
+
+        }
+
+        h4 {
+
+            @media (max-width: 970px) {
+
+                font-size: 10pt;
+
+            }
+
+            @media (min-width: 970) and (max-width: 1280) {
+
+                font-size: 12pt;
+            }
+
+        }
+
+        h2 {
+
+            padding: 10px;
+
+            i {
+
+                padding: 0;
+            }
+
+            @media (max-width: 1280px) {
+
+                display: block;
+
+            }
+
+            @media (max-width: 970px) {
+
+                font-size: 14pt;
+
+            }
+
+            @media (min-width: 970) and (max-width: 1280) {
+
+                font-size: 18pt;
+
+            }
+        }
+
+        i {
+
+            padding: 0 10px 0 0; 
+
+            margin-top: -4px;
+
+            @media (max-width: 1280px) {
+
+                padding-right: 4px;
+                
+            }
+        }
+
+        h4.se-viene {
+
+            font-size: 18pt;
+
+            letter-spacing: 0.3px;
+
+            color: @color-principal;
+
+            i {
+
+                padding: 0 0 0 10px; 
+
+                @media (max-width: 1280px) {
+
+                    padding-left: 4px;
+
+                    padding-bottom: 10px;
+
+                }
+            }
+
+            @media (max-width: 970px) {
+
+                font-size: 10pt;
+
+            }
+
+            @media (min-width: 970) and (max-width: 1280){
+
+                font-size: 14pt;
+
+            }
+
+        }
+
+        &::before, &::after {
+
+            content: "";
+
+            display: table; 
+
+            margin: 0px auto;
+
+            height: 28px;
+
+            border-left: 2px solid @color-gris-claro;
+
+            overflow: hidden;
+
+            @media (max-width: 1280px) {
+
+                height: 20px;
+
+            }
+        }
+
+        &::after {
+
+            top: 60px;
+        }
+    }
+
+    .resumen {
+
+        padding: 40px 0 0 20px;
+
+        -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+        
+        animation-delay: 1s;
+
+        z-index: 1;
+
+    }
+
+    .data-box {
+
+        color: @color-gris;
+
+        width: 60%;
+
+        position: relative;
+
+        @media (max-width: 1280px) {
+
+            width: 90%;
+
+            padding-top: 30px;
+        
+        }
+
+        h4 {
+
+            position: relative;
+
+            //color: @color-dark;
+
+            margin-top: 7px;
+
+            padding-bottom: 0;
+
+            border-bottom: 1px solid @color-gris-claro;
+
+            float: right;
+
+            width: 70%;
+
+            text-align: right;
+
+            @media (max-width: 1280px) {
+
+                font-size: 12pt;
+
+            }
+
+        }
+
+
+        i {
+
+            font-size: 28pt;
+
+            color: @color-dark;
+
+            opacity: 0.6;
+
+            margin: 0;
+
+            @media (max-width: 1280px) {
+
+                font-size: 24pt;
+            
+            }
+
+        }
+
+        p {
+
+            font-family: raleway-semi-bold;
+
+            float: right;
+
+            margin-top: -30px;
+
+            font-size: 24pt;
+
+            width: 100%;
+
+            text-align: right;
+
+            color: @color-dark;
+
+            opacity: 0.6;
+
+            @media (max-width: 1280px) {
+
+                font-size: 18pt;
+            
+            }
+        }
+
+        &.deshabilitado {
+
+            h4, p, i {
+
+                color: @color-gris-claro;
+
+            }
+
+        }
+
+    }
 
 	.panel-info-torneo {
 
@@ -1384,22 +1664,6 @@ nav {
     	text-align: center;
 
     }
-
-}
-
-#torneo-descripcion.resumen {
-
-    .afiche {
-
-        img {
-
-            width: 40%; 
-
-        }
-
-    }
-
-
 
 }
 
@@ -2696,6 +2960,10 @@ a, a:hover, a:active, a:focus {
 
 #torneo-descripcion {
 
+    color: @color-dark;
+
+    padding-top: 40px;
+
     a {
 
         color: @color-principal;
@@ -3134,10 +3402,10 @@ a, a:hover, a:active, a:focus {
 .jugador {
 
     //tamaño sm
-    width: 80%; 
+    width: 90%; 
 
     //VALORES PARA DISPOSITIVOS PEQUEÑOS
-    @media (max-width: 1280px) {
+    @media (max-width: 1024px) {
 
         width: 90%;
     }
