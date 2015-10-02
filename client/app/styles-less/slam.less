@@ -1223,15 +1223,16 @@ nav {
 
     top: 0;
 
-    height: 30%;
+    height: 40%;
 
     width: 100%;
 
-    z-index: 998;
+    z-index: 20;
+}
 
-    -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-        
-    animation-delay: 1s;
+.mini_gap.eliminada_gap {
+
+    height: 0;
 }
 
 #carousel-torneos {
@@ -1265,11 +1266,7 @@ nav {
 
     	position: absolute;
 
-    	top: 6%;
-
-        -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
-        
-        animation-delay: 1.5s;
+    	top: 12%;
 
         i {
 
@@ -1288,15 +1285,39 @@ nav {
     	
     	border-radius: 0.6em;
     
-    	padding: 10px 20px 30px 20px;
+    	padding: 6px 20px 10px 20px;
 
-        z-index: 999;
+        margin-top: 50px;
+
+        z-index: 1000;
 
         @media (max-width: 992px) {
 
             font-size: 12pt;
 
-            padding: 8px 8px 20px 10px;
+            padding: 30px 8px 5px 10px;
+
+            border-radius: 0em;
+
+            background: @color-light;
+
+            border-left: 1px solid @color-gris-claro;
+
+        }
+
+        i {
+
+            padding-right: 10px;
+
+        }
+
+        p small {
+
+            display: block;
+
+            opacity: 0.4;
+
+            //font-family: raleway-semi-bold;
 
         }
 
@@ -1304,7 +1325,9 @@ nav {
 
             font-family: raleway-semi-bold;
 
-            margin: 0;
+            margin: 10px 0;
+
+            padding-right: 60px;
 
 
             @media (max-width:970px) {
@@ -1322,6 +1345,18 @@ nav {
 
                 font-size: 12pt;
 
+            }
+
+        }
+
+        //BUG: cuando le asigno el efecto faceInLeftBig me cambia la posición del ::after ?????
+        &.fadeInLeftBig {
+
+            &::after {
+
+                top: -50px;
+
+                right: 4%;
             }
 
         }
@@ -1356,9 +1391,25 @@ nav {
 
     		text-align: center;
 
-    		margin-top: -4px;
+    		top: 0px;
 
-    		right: 50px;
+    		right: 8%;
+
+            @media (max-width:970px) {
+
+                height: 66px;
+
+                width: 66px;
+
+                font-size: 10pt;
+
+                padding: 12px;
+
+                left: -10px;
+
+                top: 0px;
+
+            }
     		
     	}
 
@@ -1366,9 +1417,15 @@ nav {
 
             background: @color-light;
 
-            -webkit-box-shadow:inset 0px 0px 0px 3px @color-principal;
-            -moz-box-shadow:inset 0px 0px 0px 3px @color-principal;
-            box-shadow:inset 0px 0px 0px 3px @color-principal;
+            //border-color: @color-principal;
+
+            @media (min-width: 992px) {
+
+                -webkit-box-shadow:inset 0px 0px 0px 3px @color-principal;
+                -moz-box-shadow:inset 0px 0px 0px 3px @color-principal;
+                box-shadow:inset 0px 0px 0px 3px @color-principal;
+
+            }
             
             h4 {
 
@@ -1382,7 +1439,7 @@ nav {
 
     .senialador {
 
-        margin-top: auto;
+        margin-top: 14%;
 
         margin-bottom: auto;
 
@@ -1395,6 +1452,18 @@ nav {
         -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
         
         animation-delay: 1.5s;
+
+        @media (max-width:990px) {
+
+            margin-top: 60%;
+
+        }
+
+        @media (max-width:990px) and (orientation: landscape) {
+
+            margin-top: 30%;
+
+        }
 
         h4, h2 {
 
@@ -1511,7 +1580,13 @@ nav {
 
             overflow: hidden;
 
-            @media (max-width: 1280px) {
+            @media (max-width:990px) {
+
+                display: none;
+
+            }
+
+            @media (min-width: 990px) and (max-width: 1280px) {
 
                 height: 20px;
 
@@ -1526,7 +1601,7 @@ nav {
 
     .resumen {
 
-        padding: 40px 0 0 20px;
+        padding: 20px 0 0 20px;
 
         -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
         
@@ -1548,7 +1623,7 @@ nav {
 
             width: 90%;
 
-            padding-top: 30px;
+            padding-bottom: 20px;
         
         }
 
@@ -3446,7 +3521,7 @@ a, a:hover, a:active, a:focus {
 .jugador {
 
     //tamaño sm
-    width: 90%; 
+    width: 100%; 
 
     //VALORES PARA DISPOSITIVOS PEQUEÑOS
     @media (max-width: 1024px) {
