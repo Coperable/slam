@@ -1228,6 +1228,7 @@ nav {
     width: 100%;
 
     z-index: 20;
+
 }
 
 .mini_gap.eliminada_gap {
@@ -1266,7 +1267,7 @@ nav {
 
     	position: absolute;
 
-    	top: 12%;
+    	top: 23%;
 
         i {
 
@@ -1483,7 +1484,7 @@ nav {
 
             }
 
-            @media (min-width: 970) and (max-width: 1280) {
+            @media (min-width: 970) and (max-width: 1366) {
 
                 font-size: 12pt;
             }
@@ -1499,7 +1500,7 @@ nav {
                 padding: 0;
             }
 
-            @media (max-width: 1280px) {
+            @media (max-width: 1366px) {
 
                 display: block;
 
@@ -1511,7 +1512,7 @@ nav {
 
             }
 
-            @media (min-width: 970) and (max-width: 1280) {
+            @media (min-width: 970) and (max-width: 1366) {
 
                 font-size: 18pt;
 
@@ -1524,7 +1525,7 @@ nav {
 
             margin-top: -4px;
 
-            @media (max-width: 1280px) {
+            @media (max-width: 1366px) {
 
                 padding-right: 4px;
                 
@@ -1543,7 +1544,7 @@ nav {
 
                 padding: 0 0 0 10px; 
 
-                @media (max-width: 1280px) {
+                @media (max-width: 1366px) {
 
                     padding-left: 4px;
 
@@ -1558,7 +1559,7 @@ nav {
 
             }
 
-            @media (min-width: 970) and (max-width: 1280){
+            @media (min-width: 970) and (max-width: 1366){
 
                 font-size: 14pt;
 
@@ -1586,7 +1587,7 @@ nav {
 
             }
 
-            @media (min-width: 990px) and (max-width: 1280px) {
+            @media (min-width: 990px) and (max-width: 1366px) {
 
                 height: 20px;
 
@@ -1619,7 +1620,7 @@ nav {
 
         position: relative;
 
-        @media (max-width: 1280px) {
+        @media (max-width: 1366px) {
 
             width: 90%;
 
@@ -1645,7 +1646,7 @@ nav {
 
             text-align: right;
 
-            @media (max-width: 1280px) {
+            @media (max-width: 1366px) {
 
                 font-size: 12pt;
 
@@ -1664,7 +1665,7 @@ nav {
 
             margin: 0;
 
-            @media (max-width: 1280px) {
+            @media (max-width: 1366px) {
 
                 font-size: 24pt;
             
@@ -1690,7 +1691,7 @@ nav {
 
             opacity: 0.6;
 
-            @media (max-width: 1280px) {
+            @media (max-width: 1366px) {
 
                 font-size: 18pt;
             
@@ -1735,21 +1736,143 @@ nav {
 }
 
 
+/*----------------------------------------------------------------------
+ 
+    06.
+    SECCIÓN DE INFROMACIÓN
+
+--------------------------------------------------------------------- */
+
+.info_seccion {
+
+    //height: 300px;
+
+    padding: 40px 0 20px 0;
+
+    overflow: hidden;
+
+    color: @color-light;
+
+    .info_contenedor {
+
+        padding: 10px 20px;
+
+        width: 80%;
+
+        //display: block;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        border-left: 1px solid rgba(255, 255, 255, 0.4)
+    }
+
+    h2 {
+
+        font-family: raleway-semi-bold;
+
+        //text-transform: uppercase;
+
+        margin: 0px;
+    }
+
+    h3 {
+
+        text-transform: none;
+    }
+
+    h4 {
+
+        font-family: raleway-semi-bold;
+
+        small {
+
+            color: @color-light;
+
+            font-family: raleway;
+        }
+    }
+
+    i {
+
+        padding-right: 10px;
+
+        &.peque {
+
+            font-size: 15pt;
+        }
+
+    }
+
+    p {
+
+        //font-size: 16pt;
+
+        letter-spacing: 1px;
+    }
+
+    .btn {
+
+        border: 0px solid @color-principal;
+
+        color: @color-light;
+
+        font-weight: 700;
+
+        font-size: 18px;
+
+        padding: 10px 25px;
+
+        letter-spacing: 3px;
+
+        //margin: auto 20px;
+
+        text-transform: uppercase;
+
+        border: 2px dashed rgba(255, 255, 255, 0.3);
+
+        &:hover {
+
+            background-color: @color-light;
+
+            color: @color-principal;
+        }
+    }
+
+}
+
+#info01 {
+
+    //background-image: url("../images/IMG-HEADER033.jpg"); 
+
+    background: @color-principal;
+
+    //opacity: 0.6;
+
+    background-position: center;
+
+    -webkit-background-size: cover;
+
+    -moz-background-size: cover;
+
+    background-size: cover;
+
+    -o-background-size: cover;
+}
 
 
 
 
+/*----------------------------------------------------------------------
+ 
+    06.
+    JUGADORES
+
+--------------------------------------------------------------------- */
 
 
-
-
-
-
-/*------------ SPEAKERS ------------ */
-
-
-
-/* Common style */
+/* CAROUSEL */
 
 .photo_carousel {
 
@@ -1840,7 +1963,7 @@ nav {
 }
 
 
-#speakers {
+#carousel_jugadores {
 
 	input[type=text] {
 
@@ -3041,6 +3164,8 @@ footer .first_line,
     //line-height: 30px;
 
     letter-spacing: 1px;
+
+    text-align: left;
 
     p {
 
