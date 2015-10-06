@@ -79,11 +79,22 @@ PÁGINAS INTERNAS:
 @color-dark: 		#000;
 @color-gris-claro:  #ddd;
 
+@color-gris-fondo:  #f7f7da;
+
 
 @color-celeste: 	#37abc8;
-@color-rojo:		#ea3522;
-@color-verde:		#81c547;
-@color-amarillo:	#ffdd19;
+@color-rojo:		#ee441e;
+@color-verde:		#8fc521;
+@color-amarillo:	#d4aa00;
+@color-fucsia:      #f3558a;
+
+
+@screen-sm-min:     768px;
+@screen-md-min:     992px; 
+@screen-lg-min:     1370px;
+
+
+
 
 
 
@@ -118,8 +129,6 @@ PÁGINAS INTERNAS:
           url('../fonts/raleway/Raleway-Light.ttf')  format('truetype');
 }
 
-
-
 //fuente para ÍCONOS
 @font-face {
 
@@ -137,454 +146,12 @@ PÁGINAS INTERNAS:
     font-style: normal;
 }
 
-.icono {
-
-    display: inline-block;
-
-    font-family: slam;
-
-    font-style: normal;
-
-    font-weight: normal;
-
-    line-height: 1;
-
-    font-size-adjust: none;
-
-    font-stretch: normal;
-
-    font-feature-settings: normal;
-
-    font-language-override: normal;
-
-    font-kerning: auto;
-
-    font-synthesis: weight style;
-
-    font-variant: normal;
-
-    font-size: inherit;
-
-    text-rendering: auto;
-}
-
-
-.icono-2x {
-
-	font-size: 2em;
-
-}
-
-.icono-3x {
-
-	font-size: 2.8em;
-	
-}
-
-.icono-4x {
-
-	font-size: 4em;
-	
-}
-
-.icono-5x {
-
-	font-size: 5em;
-
-}
-.icono-6x {
-
-	font-size: 8em;
-
-}
-
 
 
 /*----------------------------------------------------------------------
  
-	02.
-	BÁSICO
-
---------------------------------------------------------------------- */
-
-body {
-  color: red;
-}
-
-// --------------------------- TOOLTIPS --------------------------------
-
-.tooltip.bottom .tooltip-arrow {
-
-  	top: 0;
-
-  	left: 50%;
-
-  	margin-left: -5px;
-
-  	border-bottom-color: @color-principal;
-
-  	border-width: 0 5px 5px;
-
-  	opacity: 0.9;
-}
-
-
-.tooltip-inner {
-
-	color: @color-principal;
-
-	background: @color-light;
-
-	border: solid 1px @color-principal;
-
-	opacity: 0.9;
-
-	padding: 0.4em 1em;
-
-	font-family: raleway;
-
-	text-transform: uppercase;
-
-	letter-spacing: 2px;
-
-	font-weight: 400;
-
-	font-size: 10pt;
-}
-
-
-
-// --------------------------- ENCABEZADOS --------------------------------
-
-
-@-moz-document url-prefix() {
-
-    .first_image, .speakers_image {
-
-        display: inline-table;
-
-    }
-
-}
-
-// LÍNEA DEBAJO DE LOS TÍUTLOS
-.first_line {
-
-    width: 8%;
-
-    height: 60px;
-
-    border-bottom-width: 1px;
-
-    border-style: solid;
-
-    border-top: none;
-
-    border-left: none;
-
-    border-right: none;
-
-    display: inline-block;
-
-    float: left;
-
-}
-
-// TÍTULOS DE TODAS LAS SECCIONES
-.titulo {
-
-    font-size: 30px;
-
-    height: 80px;
-
-    font-weight: 400;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-    display: inline-block;
-
-    padding-left: 1%;
-
-    width: 75%;
-
-    float: left;
-
-    line-height: 30px;
-
-    p {
-
-        padding-top: 10px;
-
-    }
-
-}
-
-.btn_cancelar {
-
-    border-color: @color-gris;
-
-    color: @color-gris;
-
-    border-width: 3px;
-
-    border-style: solid;
-
-    border-radius: 0.4em;
-
-    font-weight: 700;
-
-    font-size: 18px;
-
-    padding: 10px 25px;
-
-    letter-spacing: 3px;
-
-    margin: auto 20px;
-
-    overflow: hidden;
-
-    position: relative;
-
-    text-transform: uppercase;
-
-    &:hover {
-
-        opacity: 1;
-
-        border-color: @color-dark;
-
-        color: @color-dark;
-    }
-
-}
-
-// ESPACIO DE TÍTULO DE FICHAS INTERNAS
-.TIT-centrado {
-
-    width: 50%;
-
-    vertical-align: middle;
-
-    padding: 20px 0;
-
-    //VALORES PARA DISPOSITIVOS GRANDES
-    .first_line {
-
-        width: 12%; 
-
-    }
-
-    .encabezado {
-
-        padding-left: 2%;
-
-    }
-
-    .first_description {
-
-        padding-left: 18%;
-
-    }
-
-    //VALORES PARA DISPOSITIVOS PEQUEÑOS
-    @media (max-width: 992px) {
-
-        width: 100%;
-
-        display: block;
-
-        .first_line {
-
-            width: 8%;
-
-        }
-
-        .encabezado {
-
-            padding-left: 1%;
-
-        }
-
-        .first_description {
-
-            padding-left: 9%;
-
-        }
-    }
-}
-
-
-
-
-// -------------------------- BOTONES -----------------------------------
-
-.eventime_button,
-
-.reservation_button {
-
-    border-width: 3px;
-
-    border-style: solid;
-
-    border-radius: 0;
-
-    font-weight: 700;
-
-    font-size: 18px;
-
-    padding: 10px 25px;
-
-    letter-spacing: 3px;
-
-    margin: auto 20px;
-
-    overflow: hidden;
-
-    -webkit-backface-visibility: hidden;
-
-    -moz-osx-font-smoothing: grayscale;
-
-    position: relative;
-
-    z-index: 999;
-
-    text-transform: uppercase;
-
-    -webkit-transition: all .2s ease-in-out;
-
-    -moz-transition: all .2s ease-in-out;
-
-    -o-transition: all .2s ease-in-out;
-
-    transition: all .2s ease-in-out;
-
-}
-
-.eventime_button,
-
-.reservation_button {
-
-    overflow: hidden;
-
-    width: 245px;
-
-    -webkit-transition: border-color 0.3s, color 0.3s;
-
-    transition: border-color 0.3s, color 0.3s;
-
-    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-
-    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-
-    z-index: 999;
-
-}
-
-.eventime_button::before {
-
-    content: '';
-
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
-
-    width: 150%;
-
-    height: 100%;
-
-    z-index: -1;
-
-    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
-
-    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
-
-    -webkit-transform-origin: 0% 100%;
-
-    transform-origin: 0% 100%;
-
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
-
-    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
-
-}
-
-.eventime_button:hover::before {
-
-    opacity: 1;
-
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-
-    transform: rotate3d(0, 0, 1, 0deg);
-
-    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-
-    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-
-}
-
-
-// --------------------------- OTROS -----------------------------------
-
-.gap {
-
-    height: 50px;
-
-    clear: both;
-
-}
-
-.mini_gap {
-
-    height: 25px;
-
-    clear: both;
-
-}
-
-.antigap {
-
-    margin-bottom: -20px;
-
-    clear: both;
-
-}
-
-.clear {
-
-    clear: both;
-
-}
-
-
-
-
-
-
-
-
-
-
-/*----------------------------------------------------------------------
- 
-	03.
-	PRELOADER
-
---------------------------------------------------------------------- */
-
-
-
-
-
-
-
-/*----------------------------------------------------------------------
- 
-	04.
-	HEADER 
+    04.
+    HEADER 
 
 --------------------------------------------------------------------- */
 
@@ -593,16 +160,15 @@ body {
 
 .logo-nav {
 
-	margin-top: -20px;
+    margin-top: -20px;
 
 }
-
 
 .eventime_button {
-	border-radius: 0.4em;
+
+    border-radius: 0.4em;
+
 }
-
-
 
 /* ! Navigation Settings */
 
@@ -615,32 +181,32 @@ body {
 
     .indicador-pais {
 
-    	position: absolute;
+        position: absolute;
 
-    	top: 0px;
+        top: 0px;
 
-    	left: 3%;
+        left: 3%;
 
-    	font-size: 50pt;
+        font-size: 50pt;
 
-    	font-weight: 300;
+        font-weight: 300;
 
-    	padding-top: 0px;
+        padding-top: 0px;
 
-    	//opacity: 0.5;
+        //opacity: 0.5;
 
     }
 
     .usr-menu {
 
-    	font-size: 10pt 
+        font-size: 10pt 
 
     }
 
     .nav > li > a {
 
-    		padding: 21px 6px 15px 6px !important;	
-    		
+            padding: 21px 6px 15px 6px !important;  
+            
 
     }
 
@@ -652,11 +218,11 @@ body {
 
     .barra-hor {
 
-    	font-size: 18pt;
+        font-size: 18pt;
 
-    	font-weight: 300;
+        font-weight: 300;
 
-    	padding-top: 16px;
+        padding-top: 16px;
 
     }
 
@@ -758,24 +324,15 @@ nav {
 
 }
 
-
-
-
-
-
 // -------------------------- SLIDER -----------------------------------
 
 #home_slider {
-	.left_arrow, .right_arrow {
-    	top: 45%;
+    .left_arrow, .right_arrow {
+        top: 45%;
     }
 }
 
-.carousel,
-
-.item,
-
-.active {
+.carousel, .item, .active {
 
     height: 100%;
 
@@ -789,9 +346,7 @@ nav {
 
 /* Background images are set within the HTML using inline CSS, not here */
 
-.fill,
-
-.fill_mask {
+.fill, .fill_mask {
 
     min-height: 400px;
 
@@ -847,124 +402,124 @@ nav {
 
     margin-right: auto;
 
-	h2 {
+    h2 {
 
-	    font-size: 60px;
+        font-size: 60px;
 
-	    text-transform: uppercase;
+        text-transform: uppercase;
 
-	    letter-spacing: 17px;
+        letter-spacing: 17px;
 
-	    font-weight: 400;
+        font-weight: 400;
 
-	    display: block;
+        display: block;
 
-	    width: 90%;
+        width: 90%;
 
-	    margin: 0 auto;
+        margin: 0 auto;
 
-	    @media (max-width: 600px) {
+        @media (max-width: 600px) {
 
-	        font-size: 28px;
+            font-size: 28px;
 
-	        letter-spacing: 10px;
+            letter-spacing: 10px;
 
-	    }
+        }
 
-	    @media (max-width: 400px) {
+        @media (max-width: 400px) {
 
-	        font-size: 20px;
+            font-size: 20px;
 
-	        letter-spacing: 2px;
+            letter-spacing: 2px;
 
-	    }
+        }
 
-	    @media (max-width: 992px) {
+        @media (max-width: 992px) {
 
-        	font-size: 40px;
+            font-size: 40px;
 
-    	}
+        }
 
-	}
+    }
 
-	h3 {
+    h3 {
 
-	    font-size: 40px;
+        font-size: 40px;
 
-	    text-transform: uppercase;
+        text-transform: uppercase;
 
-	    letter-spacing: 17px;
+        letter-spacing: 17px;
 
-	    font-weight: 100;
+        font-weight: 100;
 
-	    display: block;
+        display: block;
 
-	    width: 90%;
+        width: 90%;
 
-	    margin: 0 auto;
+        margin: 0 auto;
 
-	    @media (max-width: 600px) {
+        @media (max-width: 600px) {
 
-	        font-size: 20px;
+            font-size: 20px;
 
-	        text-transform: uppercase;
+            text-transform: uppercase;
 
-	        letter-spacing: 5px;
+            letter-spacing: 5px;
 
-		}
+        }
 
-	}
+    }
 
-	blockquote {
+    blockquote {
 
-		max-width: 800px;
+        max-width: 800px;
 
-    	text-transform: none;
+        text-transform: none;
 
-    	letter-spacing: 2px;
+        letter-spacing: 2px;
 
-    	font-size: 19px;
-	}
+        font-size: 19px;
+    }
 
-	#clock {
+    #clock {
 
-	    font-size: 70px;
+        font-size: 70px;
 
-	    text-transform: uppercase;
+        text-transform: uppercase;
 
-	    letter-spacing: 17px;
+        letter-spacing: 17px;
 
-	    font-weight: 100;
+        font-weight: 100;
 
-	    display: block;
+        display: block;
 
-	    width: 90%;
+        width: 90%;
 
-	    margin: 0 auto;
+        margin: 0 auto;
 
-	    @media (max-width: 600px) {
+        @media (max-width: 600px) {
 
-	        font-size: 30px;
+            font-size: 30px;
 
-	        text-transform: uppercase;
+            text-transform: uppercase;
 
-	        letter-spacing: 10px;
+            letter-spacing: 10px;
 
-	        font-weight: 100;
+            font-weight: 100;
 
-		}
+        }
 
-	}
+    }
 
-	.logo-principal {
+    .logo-principal {
 
-		max-width: 450px;
+        max-width: 450px;
 
-		width: 50%;
+        width: 50%;
 
-		//margin-left: 80px;
+        //margin-left: 80px;
 
-	}
+    }
 }
 
 
@@ -982,23 +537,23 @@ nav {
 
     margin-right: 15px;
 
-	.fa, p {
+    .fa, p {
 
-	    display: inline-block;
+        display: inline-block;
 
-	    vertical-align: middle;
+        vertical-align: middle;
 
-	}
+    }
 
-	p {
-	
-		font-weight: 300;
+    p {
+    
+        font-weight: 300;
 
-	    padding-top: 10px;
-	
-	}
+        padding-top: 10px;
+    
+    }
 
-	@media (max-width: 600px) {
+    @media (max-width: 600px) {
 
         font-size: 15px;
 
@@ -1007,6 +562,1385 @@ nav {
     }
 
 }
+
+
+
+
+/*----------------------------------------------------------------------
+ 
+	02.
+	BÁSICO - GENERAL
+
+--------------------------------------------------------------------- */
+
+body {
+
+  color: red;
+
+}
+
+// --------------------------- TOOLTIPS --------------------------------
+
+.tooltip.bottom .tooltip-arrow {
+
+  	top: 0;
+
+  	left: 50%;
+
+  	margin-left: -5px;
+
+  	border-bottom-color: @color-principal;
+
+  	border-width: 0 5px 5px;
+
+  	opacity: 0.9;
+}
+
+
+.tooltip-inner {
+
+	color: @color-principal;
+
+	background: @color-light;
+
+	border: solid 1px @color-principal;
+
+	opacity: 0.9;
+
+	padding: 0.4em 1em;
+
+	font-family: raleway;
+
+	text-transform: uppercase;
+
+	letter-spacing: 2px;
+
+	font-weight: 400;
+
+	font-size: 10pt;
+}
+
+// ESPACIO DE TÍTULO DE FICHAS INTERNAS
+.TIT-centrado {
+
+    width: 50%;
+
+    vertical-align: middle;
+
+    padding: 20px 0;
+
+    //VALORES PARA DISPOSITIVOS GRANDES
+
+    .titulo {
+
+        padding-left: 2%;
+
+    }
+
+    .first_description {
+
+        padding-left: 18%;
+
+    }
+
+    //VALORES PARA DISPOSITIVOS PEQUEÑOS
+    @media (max-width: 992px) {
+
+        width: 100%;
+
+        display: block;
+
+
+        /* ESTO ES PARA FIRST_LINEE
+        .first_line {
+
+            width: 8%;
+
+        }
+
+        .encabezado {
+
+            padding-left: 1%;
+
+        }
+
+        .first_description {
+
+            padding-left: 9%;
+
+        }*/
+    }
+}
+
+
+// -------------------------- BOTONES -----------------------------------
+
+.eventime_button,
+
+.reservation_button {
+
+    border-width: 3px;
+
+    border-style: solid;
+
+    border-radius: 0.4em;
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    padding: 10px 25px;
+
+    letter-spacing: 3px;
+
+    margin: auto 20px;
+
+    overflow: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    -moz-osx-font-smoothing: grayscale;
+
+    position: relative;
+
+    z-index: 999;
+
+    text-transform: uppercase;
+
+    -webkit-transition: all .2s ease-in-out;
+
+    -moz-transition: all .2s ease-in-out;
+
+    -o-transition: all .2s ease-in-out;
+
+    transition: all .2s ease-in-out;
+
+}
+
+.eventime_button,
+
+.reservation_button {
+
+    overflow: hidden;
+
+    width: 245px;
+
+    -webkit-transition: border-color 0.3s, color 0.3s;
+
+    transition: border-color 0.3s, color 0.3s;
+
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+    z-index: 999;
+
+}
+
+.eventime_button::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 150%;
+
+    height: 100%;
+
+    z-index: -1;
+
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+
+    -webkit-transform-origin: 0% 100%;
+
+    transform-origin: 0% 100%;
+
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+
+}
+
+.eventime_button:hover::before {
+
+    opacity: 1;
+
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+
+    transform: rotate3d(0, 0, 1, 0deg);
+
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+}
+
+.eventime_button.btn_basico {
+
+    color: @color-principal;
+
+    font-weight: 700;
+
+    margin: auto 0;
+
+    font-size: 14px;
+
+    padding: 6px 18px;
+
+    letter-spacing: 3px;
+
+    width: auto;
+
+}
+
+.btn_cancelar {
+
+    border-color: @color-gris;
+
+    color: @color-gris;
+
+    border-width: 3px;
+
+    border-style: solid;
+
+    border-radius: 0.4em;
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    padding: 10px 25px;
+
+    letter-spacing: 3px;
+
+    margin: auto 20px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    text-transform: uppercase;
+
+    &:hover {
+
+        opacity: 1;
+
+        border-color: @color-dark;
+
+        color: @color-dark;
+    }
+
+}
+
+
+// --------------------------- OTROS -----------------------------------
+
+.gap {
+
+    height: 50px;
+
+    clear: both;
+
+}
+
+.mini_gap {
+
+    height: 25px;
+
+    clear: both;
+
+}
+
+.antigap {
+
+    margin-bottom: -20px;
+
+    clear: both;
+
+}
+
+.clear {
+
+    clear: both;
+
+}
+
+.fondo_gris {
+
+    background-color: @color-gris-fondo;
+}
+
+.sombra_gris_blanco {
+
+    text-shadow: 2px 2px 0px #f7f7da, 4px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.sombra_blanco_gris {
+
+    text-shadow: 2px 2px 0px #fff, 4px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+// --------------------------- ENCABEZADOS --------------------------------
+
+
+@-moz-document url-prefix() {
+
+    .first_image, .speakers_image {
+
+        display: inline-table;
+
+    }
+
+}
+
+// LÍNEA DEBAJO DE LOS TÍUTLOS
+.first_line {
+
+    height: 60px;
+
+    border-bottom: 1px solid @color-gris;
+
+    display: inline-block;
+
+    float: left;
+
+    /* Extra small devices (phones, less than 768px) */
+    width: 4%;
+
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: @screen-sm-min) { 
+
+    }
+
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: @screen-md-min) {
+
+        width: 8%;
+
+    }
+
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: @screen-lg-min) {
+
+        width: 16%;
+
+    }
+
+}
+
+// TÍTULOS DE TODAS LAS SECCIONES
+.titulo {
+
+    display: inline-block;
+
+    //font-weight: 700;
+
+    font-family: raleway;
+
+    color: @color-dark;
+
+    //line-height: 30px;
+
+    letter-spacing: 1px;
+
+    text-align: left;
+
+
+    h2 {
+
+        font-size: 22px;
+
+        margin-bottom: 20px;
+
+        text-transform: uppercase;
+    }
+
+    i {
+
+        padding-right: 10px;
+    }
+
+    /* Extra small devices (phones, less than 768px) */
+    font-size: 12px;
+
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: @screen-sm-min) { 
+
+    }
+
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: @screen-md-min) {
+
+
+    }
+
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: @screen-lg-min) {
+
+        font-size: 16px;
+
+    }
+
+}
+
+.ver_mas {
+
+    display: inline-block;
+
+    float: right;
+
+    vertical-align: middle;
+
+    i {
+
+        padding-right: 10px;
+    }
+
+    h3 {
+
+        font-family: raleway-semi-bold;
+
+        font-size: 1em; 
+    }
+}
+
+.label_region {
+
+    margin-left: 10px;
+
+    border-top: 1px dashed @color-principal;
+
+    //border-opacity: 0.8;
+
+    //font-family: raleway-semi-bold;
+
+    color: @color-principal;
+
+    padding: 4px 0;
+
+    //border-radius: 0 0.6em 0 0.6em; 
+
+    text-shadow: none; 
+
+    letter-spacing: 3px;
+
+    text-transform: none;
+
+    opacity: 0.8;
+}
+
+// --------------------------- SECCIONES GENERAL -----------------------------------
+
+.seccion {
+
+    margin-top: 0px;
+
+    padding-top: 20px;
+
+    a {
+
+        color: @color-principal;
+
+        &:hover {
+
+            opacity: 0.6;
+        }
+
+    }
+
+    .btn {
+
+        margin-left: 0;
+
+        &:hover {
+
+            opacity: 1;
+        }
+
+    }
+
+}
+
+.icon-box {
+
+    display: inline-block;
+
+    text-align: center;
+
+    width: 30px; 
+
+    font-size: 1.3em;
+
+    //color: @color-dark;
+
+    margin: 0;
+
+}
+
+.contenedor_sec {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    padding-top: 20px;
+
+    padding-bottom: 20px;
+
+    /* Extra small devices (phones, less than 768px) */
+    width: 90%;
+
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: @screen-sm-min) { 
+
+        //width: 91%;
+
+    }
+
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: @screen-md-min) {
+
+        //width: 86%;
+
+    }
+
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: @screen-lg-min) {
+
+        width: 80%;
+
+    }
+
+}
+
+.izq { 
+
+    float: none;
+
+    display: block; 
+
+}
+
+.icono-6x {
+
+    font-size: 8em; 
+    line-height: 0.9;
+}
+
+.icono-principal {
+
+    font-size: 2.8em;
+
+    position: absolute;
+    
+    top: 20px;
+}
+
+
+.en_color_principal {
+
+    color: @color-principal;
+
+}
+
+.selector_region {
+
+    float: left;
+
+    margin-top: 20px;
+    
+    margin-left: 86px;
+
+    letter-spacing: 1px;
+
+    a#dLabel {
+
+        padding-left: 20px;
+
+        color: @color-principal;
+
+        font-size: 0.8em;
+
+        font-family: raleway-semi-bold;
+
+        text-decoration: none;
+    }
+
+    .dropdown-menu {
+
+        background-color: @color-dark;
+
+        border-radius: 0.6em; 
+
+        opacity: 0.7;
+
+        a {
+
+            font-size: 1em;
+
+            transition: all 0.5s ease-in-out 0s;
+
+            color: @color-light;
+
+            &:hover {
+
+                background-color: @color-principal;
+
+            }
+        }
+    }
+
+    a.color_cordoba:hover {
+
+        background-color: @color-rojo;
+
+    }
+
+    a.color_rosario:hover {
+
+        background-color: @color-verde;
+
+    }
+
+    a.color_usuaia:hover {
+
+        background-color: @color-fucsia;
+
+    }
+
+    a.color_mendoza:hover {
+
+        background-color: @color-amarillo;
+
+    }
+
+
+
+}
+
+
+
+/*----------------------------------------------------------------------
+ 
+	03.
+	PRELOADER
+
+--------------------------------------------------------------------- */
+
+
+//ESTO ES PARA ATAJAR ERRORES EN PANTALLA 768X1024 - QUE YA NO SE USA MÁS
+@media (min-width:769px) and (max-width:1024px){
+    // your code
+}
+
+/*----------------------------------------------------------------------
+ 
+    05.HOME 
+
+        A) TORNEOS
+
+
+--------------------------------------------------------------------- */
+
+//settings generales para las fichas de torneos
+.torneo_info_inside {
+
+    color: @color-dark;
+
+    font-family: raleway-light;
+
+    h4.torneo_nombre {
+
+        font-size: 1.2em; 
+
+        font-family: raleway-semi-bold;
+
+        margin-top: 0;
+
+    }
+
+    p {
+
+        //font-size: 0.8em;
+
+        //text-transform: lowercase;
+    }
+
+    a { text-decoration: none }
+
+    a:hover {
+
+        text-decoration: none; 
+
+        color: @color-principal;
+    }
+
+    .torneo_descripcion {
+
+        font-size: 14px;
+
+        border-left: 1px solid @color-gris-claro;
+
+        padding-left: 26px;
+
+    }
+
+    .torneo_fecha {
+
+        .num {
+
+            margin-left: 10px;
+
+            font-size: 1.4em;
+
+            font-family: raleway-semi-bold;
+
+        }
+
+        .mes {
+
+            font-size: 1em;
+
+            font-family: raleway-semi-bold;
+        }
+
+        .linea {
+
+            font-family: raleway-light;
+
+            font-weight: 100;
+
+            margin-left: 6px;
+
+            font-size: 2em;
+
+            opacity: 0.8
+        }
+
+        .hora {
+
+            margin-left: 6px;
+
+            font-size: 1.2em;
+        }
+
+    }
+
+    .torneo_lugar {
+
+        padding-top: 20px;
+
+        .lugar-nombre {
+
+            font-size: 1em;
+
+            font-family: raleway-semi-bold;
+
+            display: inline-block;    
+
+            width: 75%;
+            
+            vertical-align: middle;
+            
+            line-height: 1.1;
+
+        }
+
+        .direccion {
+
+            display: block;
+            
+            margin-left: 34px;
+
+            font-size: 0.9em;
+        }
+
+    }
+
+    .torneo_hashtag {
+
+        //border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+        //padding-top: 20px;
+
+        font-size: 14pt;
+
+        font-family: raleway-semi-bold;
+
+        span {
+
+            //margin-left: 20px;
+
+        }
+
+        .icon-box {
+
+            font-family: Raleway-Bold;
+
+        }
+
+        .aclaracion {
+
+            font-family: raleway;
+
+            //margin-left: 30px;
+            
+            font-size: 10pt;
+            
+            //display: inline-block;
+        
+        }
+
+    }
+
+    .fb-event {
+
+        padding-top: 20px;
+
+        font-size: 14pt;
+
+        font-family: raleway-semi-bold;
+
+        margin-left: 20px;
+    }
+
+    .organiza {
+
+        padding-top: 30px;
+
+        //padding-bottom: 30px;
+
+        font-size: 14pt;
+
+        span {
+
+            display: block;
+
+            margin-left: 20px;
+        }
+
+        .o-tit {
+
+            font-family: raleway-semi-bold;
+        }
+    }
+
+    .localidad {
+
+        padding-top: 15px;
+
+        color: @color-principal;
+
+        font-size: 24pt;
+
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+        span {
+
+            display: block;
+
+            margin-left: 20px;
+
+            line-height: 40pt;
+        }
+
+        .icono {
+
+            font-size: 70pt;
+
+            margin-left: -10px;
+
+            text-shadow: 3px 3px 0px #f7f7da, 6px 5px 2px rgba(0, 0, 0, 0.1);
+
+        }
+    }
+
+}
+
+//settings para RESUMEN
+.data-box {
+
+    color: @color-dark;
+
+    //width: 100%;
+
+    position: relative;
+
+    padding-bottom: 20px;
+
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+
+    @media (max-width: 1366px) {
+
+        width: 90%;
+
+        padding-bottom: 20px;
+    
+    }
+
+    .icon-box {
+
+        width: 34px;
+
+        font-size: 34px;
+    }
+
+    h4 {
+
+        position: relative;
+
+        float: right;
+
+        width: 78%;
+
+        border-bottom: 1px solid @color-gris-claro;
+
+        margin-top: 7px;
+
+        margin-bottom: 0px;
+
+        margin-bottom: 0;
+
+        padding-bottom: 4px;
+
+        text-align: right;
+
+        @media (max-width: 1366px) {
+
+            font-size: 12pt;
+
+        }
+
+    }
+
+    p {
+
+        font-family: raleway-semi-bold;
+
+        float: right;
+
+        margin-top: -14px;
+
+        padding: 0;
+
+        font-size: 24pt;
+
+        line-height: 0.6;
+
+        width: 100%;
+
+        text-align: right;
+
+        color: @color-dark;
+
+        font-size: 18pt;
+        
+    }
+
+    &.deshabilitado {
+
+        h4, p, i {
+
+            color: @color-gris-claro;
+
+        }
+
+    }
+
+}
+
+.tarjeta_torneo {
+
+    background-color: @color-light;
+
+    //padding: 20px 0 0 20px;
+
+    //border: 1px solid @color-gris;
+
+    border-radius: 0.6em; 
+
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+
+    margin-top: 30px;
+
+    margin-bottom: 30px; 
+
+    h4.torneo_nombre {
+
+        padding: 20px 40px 0px 20px;
+    }
+
+    .ver_mas {
+
+        margin-top: -45px;
+
+        margin-right: 15px;
+
+        border-left: 1px dashed @color-principal;
+
+        border-top: 1px dashed @color-principal;
+
+        border-radius: 0.4em 0 0 0;
+
+        padding: 10px 5px 5px 12px; 
+
+        h3 {
+
+            margin: 0;
+        }
+
+    }
+
+    &::after {
+
+        content: attr(fecha); 
+
+        position: absolute;
+
+        display: inline-block;
+
+        vertical-align: middle;
+
+        background: @color-principal;
+
+        color: @color-light;
+
+        font-family: raleway-bold;
+
+        font-size: 12pt;
+
+        line-height: 1.1;
+        
+        word-spacing: 9999999px;
+
+        padding: 12px;
+
+        height: 80px;
+
+        width: 80px;
+
+        border-radius: 50%;
+
+        border: 6px solid @color-gris-fondo;
+
+        text-align: center;
+
+        top: -10px;
+
+        right: 8%;
+
+    }
+}
+
+.torneo_resumen {
+
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: 50%; 
+
+    max-width: 190px;
+
+    padding-left: 20px;
+
+    padding-right: 0;
+
+    padding-bottom: 10px;
+
+    opacity: 0.6;
+
+    .icon-box {
+
+        width: 24px; 
+
+        font-size: 24px;
+    }
+
+    .data-box {
+
+        margin-top: 6px;
+
+        margin-bottom: 6px;
+
+        padding-bottom: 20px;
+
+        h4{
+
+            font-size: 90% !important;
+        }
+
+        p {
+
+            margin-top: -4px;
+        }
+
+    }
+
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: @screen-lg-min) {
+
+        margin-right: 4%;
+    }
+
+}
+
+.torneo_datos {
+
+    display: inline-block;
+
+    width: 48%;
+
+    height: 100%;
+
+    padding-left: 5px;
+
+    padding-top: 10px;
+
+    border-left: 1px solid @color-gris-claro;
+
+    opacity: 0.6;
+}
+
+// --------------------------- TORNEO PRINCIPAL -----------------------------------
+#sec_torneoPrincipal {
+
+    //height: 400px;
+
+    border-bottom: 1px solid @color-gris-claro;
+
+    img {
+
+        width: 100%;
+
+        max-width: 600px;
+
+        margin-bottom: 20px;
+    }
+
+    .row > div {
+
+        padding-top: 20px;
+    }
+
+
+    .torneo_descripcion {
+
+        max-width: 600px;
+
+    }
+
+    .icon-jugador {
+
+        margin-left: -6px;
+    }
+
+    .data-box {
+
+        color: @color-dark;
+
+        max-width: 220px;
+
+        //settings para CUPOS
+        h4 {
+
+            color: @color-principal;
+
+            small {
+
+                padding-right: 12px;
+            }
+        }
+
+        //settings para JUGADORES REGISTRADOS
+        p {
+
+            color: @color-principal;
+
+            small {
+
+                padding-right: 34px;
+
+                color: @color-dark;
+            }
+
+        }
+    }
+
+}
+
+// --------------------------- TORNEOS ANTERIORES -----------------------------------
+#sec_torneosAnteriores {
+
+    .titulo {
+
+        color: @color-dark;
+
+    }
+
+}
+
+/*----------------------------------------------------------------------
+ 
+    05.HOME 
+
+        B) JUGADORES
+
+
+--------------------------------------------------------------------- */
+
+#sec_jugadores {
+
+    border-bottom: 1px solid @color-gris-claro;
+
+    padding-bottom: 20px;
+
+    .btn {
+
+        margin-top: 20px;
+    }
+
+}
+
+.tarjeta_jugador {
+
+    color: @color-dark;
+
+    background-color: @color-light;
+
+    border-radius: 0.6em;
+
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+
+    margin-top: 20px; 
+
+    margin-bottom: 20px; 
+
+    img {
+
+        width: 55%;
+
+        border-radius: 0.6em 0 0 0.6em;
+    }
+
+    .jug_resumen {
+
+        display: inline-block;
+
+        vertical-align: top;
+
+        width: 40%;
+
+        padding-left: 10px;
+    }
+
+    h3 {
+
+        //text-align: right;
+
+        font-size: 1em;
+
+        font-family: raleway-semi-bold;
+
+        margin-top: 10px;
+
+        margin-bottom: 20px;
+
+    }
+
+    .icon-box {
+
+        width: 20px; 
+
+        font-size: 20px;
+    }
+
+    .data-box {
+
+        margin-top: 0;
+
+        margin-bottom: 0;
+
+        h4 {
+
+            margin-top: -2px; 
+
+            margin-left: 0;
+
+            width: 70%;
+
+            font-size: 80%;
+        }
+
+        p {
+
+            font-size: 1em;
+
+            margin-top: -8px;
+        }
+    }
+
+}
+
+/*----------------------------------------------------------------------
+ 
+    05.HOME 
+
+        C) VIDEOS
+
+
+--------------------------------------------------------------------- */
+
+#sec_videos {
+
+    border-bottom: 1px solid @color-gris-claro;
+
+    padding-bottom: 20px;
+
+    .btn {
+
+        margin-top: 20px;
+    }
+
+}
+
+.tarjeta_video {
+
+    margin-top: 20px; 
+
+    margin-bottom: 20px; 
+
+    .embed-responsive-item {
+
+        border-radius: 0.6em;
+    }
+
+}
+
+.contacto_tit {
+
+    color: @color-light; 
+
+    margin-left: 8%;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1070,80 +2004,6 @@ nav {
 			}
 		}
 
-	}
-
-}
-
-#carousel-localidades {
-
-    position: relative;
-
-    margin: 0 auto;
-
-    .carousel-inner {
-
-    	.item {
-			
-			margin: 0px auto;
-    	}
-
-    	.row {
-
-    		margin-left: 5%;
-
-    		margin-right: 5%;
-    	}
-
-    }
-
-    .thumbnail {
-
-    	border: 0px;
-
-    	text-align: center;
-
-    }
-
-    .localidad-selector {
-
-    	color: #9d9d9d;
-
-    	outline: none;
-
-    	opacity: 0.4;
-
-
-
-    	transition: opacity .25s ease-in-out;
-
-    	-moz-transition: opacity .25s ease-in-out;
-
-    	-webkit-transition: opacity .25s ease-in-out;
-
-    	&:hover {
-
-    		opacity: 1;
-
-    		//text-shadow: 4px 3px 0px #1D9D74, 9px 8px 0px rgba(0, 0, 0, 0.15);
-    		text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
-    	}
-    
-    }
-
-	.Argentina {
-
-		color: #cb9820;
-	}
-
-	.Cordoba {
-
-		color: #ff6555;
-		
-	}
-
-	.Baires {
-
-		color: #37abc8;
 	}
 
 }
@@ -1598,116 +2458,6 @@ nav {
 
             top: 60px;
         }
-    }
-
-    .resumen {
-
-        padding: 20px 0 0 20px;
-
-        -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-        
-        animation-delay: 1s;
-
-        z-index: 1;
-
-    }
-
-    .data-box {
-
-        color: @color-gris;
-
-        width: 60%;
-
-        position: relative;
-
-        @media (max-width: 1366px) {
-
-            width: 90%;
-
-            padding-bottom: 20px;
-        
-        }
-
-        h4 {
-
-            position: relative;
-
-            //color: @color-dark;
-
-            margin-top: 7px;
-
-            padding-bottom: 0;
-
-            border-bottom: 1px solid @color-gris-claro;
-
-            float: right;
-
-            width: 70%;
-
-            text-align: right;
-
-            @media (max-width: 1366px) {
-
-                font-size: 12pt;
-
-            }
-
-        }
-
-
-        i {
-
-            font-size: 28pt;
-
-            color: @color-dark;
-
-            opacity: 0.6;
-
-            margin: 0;
-
-            @media (max-width: 1366px) {
-
-                font-size: 24pt;
-            
-            }
-
-        }
-
-        p {
-
-            font-family: raleway-semi-bold;
-
-            float: right;
-
-            margin-top: -30px;
-
-            font-size: 24pt;
-
-            width: 100%;
-
-            text-align: right;
-
-            color: @color-dark;
-
-            opacity: 0.6;
-
-            @media (max-width: 1366px) {
-
-                font-size: 18pt;
-            
-            }
-        }
-
-        &.deshabilitado {
-
-            h4, p, i {
-
-                color: @color-gris-claro;
-
-            }
-
-        }
-
     }
 
 	.panel-info-torneo {
@@ -3141,45 +3891,6 @@ footer .first_line,
 
 
 
-/*----------------------------------------------------------------------
- 
-    20.
-    ELEMENTOS DE FICHAS INTERNAS
-
---------------------------------------------------------------------- */
-
-
-.encabezado {
-
-    //font-family: raleway-semi-bold;
-
-    font-size: 20pt;
-
-    text-transform: none;
-
-    color: @color-principal;
-
-    text-shadow: 3px 3px 0px #f7f7da, 6px 5px 2px rgba(0, 0, 0, 0.1);
-
-    //line-height: 30px;
-
-    letter-spacing: 1px;
-
-    text-align: left;
-
-    p {
-
-        padding-top: 10px;
-
-    }
-
-    @media (max-width: 992px) {
-
-        font-size: 25px;
-
-        line-height: 25px;
-    }
-}
 
 
 /*----------------------------------------------------------------------
@@ -3198,7 +3909,7 @@ a, a:hover, a:active, a:focus {
 
 #ficha-torneo {
 
-    background-color: #f7f7da;
+    background-color: @color-gris-fondo;
 
 }
 
@@ -3318,180 +4029,6 @@ a, a:hover, a:active, a:focus {
         border-left: 1px solid #333333;
 
         color: @color-dark;
-
-        span {
-            
-            display:inline-block; 
-
-            vertical-align:middle; 
-
-        }
-
-        .icono {
-
-            font-size: 20pt;
-        }
-
-        .fecha {
-
-            .num {
-
-                margin-left: 10px;
-
-                font-size: 44pt;
-
-                font-weight: 600;
-
-                margin-top: -15px;
-            }
-
-            .mes {
-
-                font-family: raleway-semi-bold;
-
-                font-size: 20pt;
-            }
-
-            .linea {
-
-                font-family: raleway-light;
-
-                font-weight: 100;
-
-                margin-left: 10px;
-
-                font-size: 30pt;
-            }
-
-            .hora {
-
-                margin-left: 10px;
-
-                font-size: 20pt;
-            }
-
-        }
-
-        .lugar {
-
-            padding-top: 20px;
-
-            .lugar-nombre {
-
-                margin-left: 10px;
-
-                font-size: 20pt;
-            }
-
-            .direccion {
-
-                display: block;
-                
-                margin-left: 30px;
-
-                font-family: raleway-semi-bold;
-
-                font-size: 14pt;
-            }
-
-        }
-
-        .hashtag-info {
-
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-
-            padding-top: 20px;
-
-            font-size: 14pt;
-
-            font-family: raleway-semi-bold;
-
-            span {
-
-                margin-left: 20px;
-
-            }
-
-            .icono {
-
-                font-family: Raleway-Bold;
-
-            }
-
-            .aclaracion {
-
-                font-family: raleway;
-
-                margin-left: 30px;
-                
-                font-size: 10pt;
-                
-                display: block;
-            
-            }
-
-        }
-
-        .fb-event {
-
-            padding-top: 20px;
-
-            font-size: 14pt;
-
-            font-family: raleway-semi-bold;
-
-            margin-left: 20px;
-        }
-
-        .organiza {
-
-            padding-top: 30px;
-
-            //padding-bottom: 30px;
-
-            font-size: 14pt;
-
-            span {
-
-                display: block;
-
-                margin-left: 20px;
-            }
-
-            .o-tit {
-
-                font-family: raleway-semi-bold;
-            }
-        }
-
-        .localidad {
-
-            padding-top: 15px;
-
-            color: @color-principal;
-
-            font-size: 24pt;
-
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-
-            span {
-
-                display: block;
-
-                margin-left: 20px;
-
-                line-height: 40pt;
-            }
-
-            .icono {
-
-                font-size: 70pt;
-
-                margin-left: -10px;
-
-                text-shadow: 3px 3px 0px #f7f7da, 6px 5px 2px rgba(0, 0, 0, 0.1);
-            }
-        }
 
     }
 
@@ -3802,7 +4339,7 @@ label {
 
     #torneo-inner {
 
-        width: 80%;
+        //width: 80%;
 
         margin-left: auto;
 
