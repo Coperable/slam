@@ -42,6 +42,26 @@ angular
         templateUrl: 'views/torneo.html',
         controller: 'torneo-view'
       })
+      .when('/jugador', {
+        templateUrl: 'views/jugador.html',
+        controller: 'jugador-view'
+      })
+      .when('/jugadores', {
+        templateUrl: 'views/jugadores.html',
+        controller: 'jugador-list'
+      })
+      .when('/torneos', {
+        templateUrl: 'views/torneos.html',
+        controller: 'torneo-list'
+      })
+      .when('/videos', {
+        templateUrl: 'views/videos.html',
+        controller: 'video-list'
+      })
+      .when('/registro', {
+        templateUrl: 'views/registro.html',
+        controller: 'user-signup'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',

@@ -9,6 +9,9 @@
 
 module.exports = function (grunt) {
 
+  // Load grunt tasks automatically
+  require('load-grunt-tasks')(grunt);
+
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
@@ -22,7 +25,8 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
+    dist: 'dist',
+    deploy: '../public'
   };
 
   // Define the configuration for all the tasks
@@ -54,7 +58,7 @@ module.exports = function (grunt) {
       },
         less: {
             files: ["<%= yeoman.app %>/styles-less/{,*/}*.less"],
-            tasks: ["less:server"]
+            tasks: ["less:server", 'build']
         },
 
       gruntfile: {
@@ -214,7 +218,7 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          //'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -234,7 +238,8 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: "<%= yeoman.app %>/styles-less",
                     src: "{,*/}*.less",
-                    dest: ".tmp/styles",
+                    dest: '<%= yeoman.dist %>/styles/',
+                    //dest: ".tmp/styles",
                     ext: ".css"
                 }
             ]
@@ -418,6 +423,27 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>'
         }]
       },
+      deploy: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.dist%>',
+          dest: '<%= yeoman.deploy%>',
+          src: [
+            '*.{ico,png,txt}',
+            '.htaccess',
+            '*.html',
+            'images/{,*/}*.{webp}',
+            'resources/{,*/}*.*',
+            'scripts/{,*/}*.*',
+            'styles/{,*/}*.*',
+            'bower_components/{,*/}*.*',
+            'styles/fonts/{,*/}*.*'
+          ]
+        }
+        ]
+      },
+
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
@@ -461,6 +487,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'less',
       'wiredep',
       'concurrent:server',
       'autoprefixer:server',
@@ -499,7 +526,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'copy:deploy'
   ]);
 
   grunt.registerTask('default', [

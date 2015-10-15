@@ -36,6 +36,21 @@ angular.module('slamApp')
 	$rootScope.home_page = false;
 
 })
+.controller('torneo-list', function ($scope, $rootScope) {
+	$rootScope.home_page = false;
+})
+.controller('user-signup', function ($scope, $rootScope) {
+	$rootScope.home_page = false;
+})
+.controller('video-list', function ($scope, $rootScope) {
+	$rootScope.home_page = false;
+})
+.controller('jugador-view', function ($scope, $rootScope) {
+	$rootScope.home_page = false;
+})
+.controller('jugador-list', function ($scope, $rootScope) {
+	$rootScope.home_page = false;
+})
 .controller('foro-view', function ($scope, $rootScope) {
 	$rootScope.home_page = false;
 
