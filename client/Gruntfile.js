@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         less: {
             files: ["<%= yeoman.app %>/styles-less/{,*/}*.less"],
             //tasks: ["less:server", 'build']
-            tasks: ["less:server"]
+            tasks: ["less:server", 'buildless']
         },
 
       gruntfile: {
@@ -530,6 +530,19 @@ module.exports = function (grunt) {
     'htmlmin',
     'copy:deploy'
   ]);
+
+  grunt.registerTask('buildless', [
+    'clean:dist',
+    'less',
+    'concurrent:server',
+    'ngtemplates',
+    'concat',
+    'ngAnnotate',
+    'copy:dist',
+    'copy:deploy'
+  ]);
+
+
 
   grunt.registerTask('default', [
     'newer:jshint',
