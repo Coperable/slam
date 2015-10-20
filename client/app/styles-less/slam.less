@@ -170,6 +170,69 @@ PÁGINAS INTERNAS:
 
 }
 
+.eventime_button.btn_filtro {
+
+    width: auto; 
+
+    padding: 8px 20px;
+
+    border-width: 1px; 
+
+    font-size: 11pt;
+
+    border-radius: 0.4em; 
+
+    border-color: @color-gris-claro; 
+
+    background-color: @color-light;
+
+    text-transform: none;
+
+    letter-spacing: 0;
+
+    //border-style: dashed;
+}
+
+
+
+a.btn_principal {
+
+    border-width: 3px;
+    
+    border-style: solid;
+    
+    border-radius: 0.4em;
+    
+    font-weight: 700;
+    
+    font-size: 18px;
+    
+    padding: 10px 25px;
+    
+    letter-spacing: 3px;
+
+    background-color: @color-principal;
+
+    color: @color-light !important;
+
+}
+
+
+a.btn.btn_principal:hover {
+
+    opacity: 0.8;
+
+}
+
+.busqueda {
+
+    width: 35%;
+    
+    float: right;
+    
+    margin-top: -2px;
+}
+
 /* ! Navigation Settings */
 
 .navi_container {
@@ -735,6 +798,11 @@ body {
 
     z-index: 999;
 
+    &:hover {
+
+        opacity: 1;
+    }
+
 }
 
 .eventime_button::before {
@@ -875,6 +943,13 @@ body {
 
     background-color: @color-gris-fondo;
 }
+
+
+.fondo_claro {
+
+    background-color: @color-light;
+}
+
 
 .sombra_gris_blanco {
 
@@ -1059,13 +1134,25 @@ body {
 
         margin-left: 0;
 
+    }
+
+}
+
+
+.tabpanel {
+
+    color: @color-dark;
+}
+
+a {
+    
+    .tarjeta_torneo, .resumen {
+
         &:hover {
 
             opacity: 1;
         }
-
     }
-
 }
 
 .icon-box {
@@ -1271,15 +1358,6 @@ body {
         //font-size: 0.8em;
 
         //text-transform: lowercase;
-    }
-
-    a { text-decoration: none }
-
-    a:hover {
-
-        text-decoration: none; 
-
-        color: @color-principal;
     }
 
     .torneo_descripcion {
@@ -1558,6 +1636,9 @@ body {
 
 }
 
+
+
+
 .tarjeta_torneo {
 
     background-color: @color-light;
@@ -1573,6 +1654,20 @@ body {
     margin-top: 30px;
 
     margin-bottom: 30px; 
+
+    .fondo_claro & {
+
+        border: 1px solid rgba(0, 0, 0, 0.1);
+
+        &::after { 
+
+            border-color: @color-light;
+
+        }
+
+    }
+
+
 
     h4.torneo_nombre {
 
@@ -1744,7 +1839,7 @@ body {
         margin-left: -6px;
     }
 
-    .data-box {
+    .data-box.featured {
 
         color: @color-dark;
 
@@ -1803,11 +1898,6 @@ body {
     border-bottom: 1px solid @color-gris-claro;
 
     padding-bottom: 20px;
-
-    .btn {
-
-        margin-top: 20px;
-    }
 
 }
 
