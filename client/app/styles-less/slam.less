@@ -1139,9 +1139,21 @@ body {
 }
 
 
-.tabpanel {
+h4.pruebaaaaaaa {
 
-    color: @color-dark;
+    font-size: 100px; 
+
+    color: @color-principal;
+}
+
+.tab-content {
+
+    padding-top: 200px;
+}
+
+.tab-content h4{
+
+    color: @color-dark !important;
 }
 
 a {
@@ -4003,11 +4015,13 @@ a, a:hover, a:active, a:focus {
 
 }
 
+
+
 #torneo-descripcion {
 
     color: @color-dark;
 
-    padding-top: 40px;
+    //padding-top: 40px;
 
     a {
 
@@ -4016,8 +4030,6 @@ a, a:hover, a:active, a:focus {
     }
 
     .datos-generales {
-
-        margin-left: 10%;
 
         color: @color-dark;
 
@@ -4028,7 +4040,11 @@ a, a:hover, a:active, a:focus {
             font-size: 24pt;
 
             font-family: raleway-semi-bold;
-        }
+
+            margin-top: 0;
+
+            color: @color-principal
+;        }
 
         p {
 
@@ -4072,6 +4088,26 @@ a, a:hover, a:active, a:focus {
 
     }
 
+    .panel-lateral {
+
+        padding-bottom: 40px;
+
+        border-left: 1px solid #333333;
+
+        color: @color-dark;
+
+    }
+
+}
+
+
+
+
+
+
+
+#torneo_content {
+
     .descripcion {
 
         padding: 40px 120px 40px 20px;
@@ -4080,9 +4116,13 @@ a, a:hover, a:active, a:focus {
 
         font-size: 16pt;
 
+        color: @color-dark;
+
     }
 
     .reglas {
+
+        color: @color-dark;
 
         font-size: 14pt;
 
@@ -4090,7 +4130,7 @@ a, a:hover, a:active, a:focus {
 
         width: 80%;
 
-        background-color: @color-light;
+        background-color: @color-gris-fondo;
 
         border: 3px solid @color-principal;
 
@@ -4112,17 +4152,91 @@ a, a:hover, a:active, a:focus {
         }
     }
 
-    .panel-lateral {
+}
 
-        padding-bottom: 160px;
 
-        border-left: 1px solid #333333;
+.tabs_lookeadas {
 
-        color: @color-dark;
+    border-bottom: 1px solid @color-gris-claro; 
+
+    border-top: 1px solid @color-gris-claro;
+
+    text-align: center;
+
+    //.contenedor_sec;
+
+    //padding-top: 0;
+
+    .nav-tabs{
+
+        .contenedor_sec;
+
+        padding: 0;
+
+        border: 0;
+
+        //margin: 0 20%;
+
+        & > li > a {
+
+            text-align: center;
+
+            padding: 20px;
+
+            color: @color-dark;
+
+            font-size: 11pt;
+
+            letter-spacing: 1pt;
+
+            line-height: 30pt;
+
+            text-transform: uppercase;         
+
+            display: inline-block;
+                
+            vertical-align: middle;
+
+            border: 0; 
+
+            cursor: pointer;
+
+            i {
+                
+                vertical-align: middle;
+
+                font-size: 24pt;
+
+                padding-right: 10px;
+            }
+
+            &:hover {
+
+                opacity: 0.6;
+            }
+
+        }
+
+        & > li.active a {
+
+            color: @color-principal;
+
+            border: none;
+
+            border-bottom: 5px solid @color-principal;
+
+            &:hover {
+
+                opacity: 1;
+            }
+
+        }
 
     }
 
 }
+
+
 
 #torneo-content {
 
