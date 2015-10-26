@@ -8,9 +8,10 @@
  * Controller of the slamApp
  */
 angular.module('slamApp')
-.controller('MainCtrl', function ($scope, $rootScope) {
+.controller('MainCtrl', function ($scope, $rootScope, $http, api_host, Region) {
 
 	$rootScope.home_page = true;
+    $scope.summary = {};
     $scope.setup_components = function() {
         setTimeout(function() {
             $("#home_slider_2").carousel({
@@ -20,13 +21,58 @@ angular.module('slamApp')
     };
 
     $scope.setup_components();
-	$scope.participantes = 25;
-	$scope.torneos = 10;
 
-	$scope.changeLocalidad = function(localidad) {
-		$scope.participantes = 60;	
-		$scope.torneos = 30;	
-	};
+    $scope.refreshRegion = function() {
+        Region.get({
+            id: $scope.current_region.id
+        }, function(data) {
+            $scope.region = data;
+            $scope.fetchSummary();
+        });
+    };
+
+    $scope.fetchSummary = function() {
+        $http.get(api_host+'/api/region/'+$scope.current_region.id+'/summary').success(function(summary_data) {
+            $scope.processSummary(summary_data);
+        });
+    };
+
+    $scope.processSummary = function(summary_data) {
+        $scope.summary = summary_data;
+    };
+
+
+    $rootScope.$on("current_region", function(event, current_region) {
+        if(current_region) {
+            $scope.current_region = current_region;
+            $scope.refreshRegion();
+        }
+    });
+
+
+})
+.controller('sessionBar', function ($scope, $rootScope, $http, Region) {
+    $scope.regions = [];
+    $scope.region = {};
+    $scope.current_region = {};
+    $scope.summary = {};
+
+
+    Region.query(function(regions) {
+        $scope.regions = regions;
+        if(_.isEmpty($scope.current_region)) {
+            $scope.setCurrentRegion(_.first($scope.regions));
+        }
+    });
+
+
+    $scope.setCurrentRegion = function(region) {
+        $scope.current_region = region;
+        $rootScope.current_region = region;
+        $rootScope.$broadcast("current_region", region);
+    };
+
+
 })
 .controller('revista-view', function ($scope, $rootScope) {
 	$rootScope.home_page = false;

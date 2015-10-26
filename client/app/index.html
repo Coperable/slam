@@ -65,7 +65,7 @@
     </div>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-fixed-top nav_mask">
+    <nav class="navbar navbar-fixed-top nav_mask" data-ng-controller="sessionBar">
     
         <div class="navi_container">
     
@@ -98,25 +98,16 @@
                 <div class="selector_region dropdown">
 
                     <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        Argentina
-                        
+                        {{current_region.name}}
                         <span class="caret"></span>
                     
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="dLabel">
                     
-                        <li><a href="">Argentina</a></li>
+                        <li ng-repeat="region in regions" ><a href="" ng-click="setCurrentRegion(region)" class="color_{{region.icon}}" >{{region.name}}</a></li>
 
                         <li class="divider"></li>
-                    
-                        <li><a class="color_cordoba" href="">Córdoba</a></li>
-
-                        <li><a class="color_rosario" href="">Rosario</a></li>
-
-                        <li><a class="color_usuaia" href="">Usuaia</a></li>
-
-                        <li><a class="color_mendoza" href="">Mendoza</a></li>
                     
                     </ul>
                 
@@ -529,11 +520,15 @@
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
     <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/satellizer/satellizer.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/config.js"></script>
         <script src="scripts/app.js"></script>
+        <script src="scripts/services/services.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/minify.js"></script>
