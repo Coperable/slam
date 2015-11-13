@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: Slam
-        psr4_prefix: Slam
-        src_path: app
