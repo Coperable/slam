@@ -9,12 +9,13 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'satellizer',
     'config',
     'ngTouch',
+    'ui.router',
+    //'ui.bootstrap',
     'satellizer'
 ])
-.config(function($routeProvider, $urlRouterProvider, $authProvider, $locationProvider) {
+.config(function($routeProvider, $authProvider, $locationProvider) {
     $routeProvider
     .when('/', {
         templateUrl: 'views/main.html',
