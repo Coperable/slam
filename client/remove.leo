@@ -1,1 +1,0 @@
-Gruntfile.js app/index.html app/preview.html app/scripts/app.js app/scripts/controllers/main.js app/scripts/controllers/preview.js app/views/preview.html bower.json app/views/jugador.html app/views/jugadores.html app/views/registro.html app/views/torneos.html app/views/videos.html

@@ -14,9 +14,23 @@ angular.module('slamApp')
     $scope.summary = {};
     $scope.setup_components = function() {
         setTimeout(function() {
-            $("#home_slider_2").carousel({
+            jQuery("#home_slider_2").carousel({
                 interval:7e3
             });
+
+            jQuery('[data-toggle="tooltip"]').tooltip({
+                trigger: 'hover'
+		    });
+
+            jQuery('#carousel-torneos').carousel({
+                interval: 1000,
+                wrap: false
+            });
+
+            jQuery("#preloader").fadeOut("fast",function(){
+                jQuery(this).remove()
+            });
+
         }, 1000);
     };
 
@@ -51,7 +65,15 @@ angular.module('slamApp')
 
 
 })
-.controller('sessionBar', function ($scope, $rootScope, $http, Region) {
+.controller('site-controller', function ($scope, $rootScope, $http, Region, Account) {
+    $scope.current_region = {};
+
+    Account.listenRegion(function(region) {
+        $scope.current_region = region;
+    });
+
+})
+.controller('sessionBar', function ($scope, $rootScope, $http, Region, Account) {
     $scope.regions = [];
     $scope.region = {};
     $scope.current_region = {};
@@ -67,9 +89,8 @@ angular.module('slamApp')
 
 
     $scope.setCurrentRegion = function(region) {
+        Account.setCurrentRegion(region);
         $scope.current_region = region;
-        $rootScope.current_region = region;
-        $rootScope.$broadcast("current_region", region);
     };
 
 

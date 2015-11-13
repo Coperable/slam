@@ -32,6 +32,7 @@ angular.module('slamApp')
         profile: false,
         profile_id: false,
         fetching: false,
+        current_region: false,
         roles: [],
         regions: [],
     
@@ -109,11 +110,25 @@ angular.module('slamApp')
         updateProfile: function(profileData) {
             return $http.put(api_host+'/api/me', profileData);
         },
+        setCurrentRegion: function(region) {
+            this.current_region = region;
+            $rootScope.current_region = region;
+            this.broadcastRegion();
+        },
+        broadcastRegion: function() {
+            $rootScope.$broadcast("current_region", this.current_region);
+        },
+        listenRegion: function(callback) {
+            $rootScope.$on("current_region", function(event, newValue) {
+                if(newValue) {
+                    callback(newValue);
+                }
+            });
+        },
         broadcast: function() {
             $rootScope.$broadcast("account", this.profile);
         },
         listen: function(callback) {
-
             console.log('Account: set list for callback');
             $rootScope.$on("account", function(event, newValue) {
                 if(newValue) {

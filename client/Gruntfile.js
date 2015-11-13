@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         less: {
             files: ["<%= yeoman.app %>/styles-less/{,*/}*.less"],
             //tasks: ["less:server", 'build']
-            tasks: ["less:server", 'buildless']
+            tasks: ["less:server", 'buildless', 'build']
         },
 
       gruntfile: {
@@ -255,7 +255,8 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: "<%= yeoman.app %>/styles-less",
                     src: "{,*/}*.less",
-                    dest: ".tmp/styles",
+                    dest: '<%= yeoman.dist %>/styles/',
+                    //dest: ".tmp/styles",
                     ext: ".css"
                 }
             ]
@@ -410,6 +411,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'images/{,*/}*.{webp}',
+            'fonts/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
@@ -456,6 +458,7 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
+        'less:dist',
         'copy:styles'
       ],
         lessServer: ["less:server", "copy:styles"],
@@ -525,7 +528,7 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'filerev',
+    //'filerev',
     'usemin',
     'htmlmin',
     'copy:deploy'
