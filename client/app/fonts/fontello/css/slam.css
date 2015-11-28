@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'slam';
-  src: url('../font/slam.eot?32108881');
-  src: url('../font/slam.eot?32108881#iefix') format('embedded-opentype'),
-       url('../font/slam.woff?32108881') format('woff'),
-       url('../font/slam.ttf?32108881') format('truetype'),
-       url('../font/slam.svg?32108881#slam') format('svg');
+  src: url('../font/slam.eot?89225874');
+  src: url('../font/slam.eot?89225874#iefix') format('embedded-opentype'),
+       url('../font/slam.woff?89225874') format('woff'),
+       url('../font/slam.ttf?89225874') format('truetype'),
+       url('../font/slam.svg?89225874#slam') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'slam';
-    src: url('../font/slam.svg?32108881#slam') format('svg');
+    src: url('../font/slam.svg?89225874#slam') format('svg');
   }
 }
 */
@@ -54,18 +54,49 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-argentina:before { content: '\e800'; } /* '' */
-.icon-buenos-aires:before { content: '\e801'; } /* '' */
-.icon-copa:before { content: '\e802'; } /* '' */
-.icon-cordoba:before { content: '\e803'; } /* '' */
-.icon-jugador:before { content: '\e804'; } /* '' */
-.icon-mapacoperable:before { content: '\e805'; } /* '' */
-.icon-notificacion:before { content: '\e806'; } /* '' */
-.icon-revista:before { content: '\e807'; } /* '' */
-.icon-slamers:before { content: '\e808'; } /* '' */
-.icon-slam-logo01:before { content: '\e809'; } /* '' */
-.icon-slam-logo02:before { content: '\e80a'; } /* '' */
-.icon-slam-logo03:before { content: '\e80b'; } /* '' */
-.icon-slam-logo04:before { content: '\e80c'; } /* '' */
-.icon-slam-logo-arg:before { content: '\e80d'; } /* '' */
-.icon-video:before { content: '\e80e'; } /* '' */
+.icon-comentarios:before { content: '\e800'; } /* '' */
+.icon-video:before { content: '\e801'; } /* '' */
+.icon-slam-x-o:before { content: '\e802'; } /* '' */
+.icon-slam-x:before { content: '\e803'; } /* '' */
+.icon-slam-black:before { content: '\e804'; } /* '' */
+.icon-slam-arg:before { content: '\e805'; } /* '' */
+.icon-slam:before { content: '\e806'; } /* '' */
+.icon-provincia-cordoba:before { content: '\e807'; } /* '' */
+.icon-provincia-entrerios:before { content: '\e808'; } /* '' */
+.icon-provincia-formosa:before { content: '\e809'; } /* '' */
+.icon-provincia-jujuy:before { content: '\e80a'; } /* '' */
+.icon-provincia-lapampa:before { content: '\e80b'; } /* '' */
+.icon-provincia-larioja:before { content: '\e80c'; } /* '' */
+.icon-provincia-malvinas:before { content: '\e80d'; } /* '' */
+.icon-provincia-mendoza:before { content: '\e80e'; } /* '' */
+.icon-provincia-misiones:before { content: '\e80f'; } /* '' */
+.icon-provincia-neuquen:before { content: '\e810'; } /* '' */
+.icon-provincia-rionegro:before { content: '\e811'; } /* '' */
+.icon-provincia-salta:before { content: '\e812'; } /* '' */
+.icon-provincia-sanjuan:before { content: '\e813'; } /* '' */
+.icon-provincia-sanluis:before { content: '\e814'; } /* '' */
+.icon-provincia-santacruz:before { content: '\e815'; } /* '' */
+.icon-provincia-santafe:before { content: '\e816'; } /* '' */
+.icon-provincia-stgodelestero:before { content: '\e817'; } /* '' */
+.icon-provincia-tierradelfuego:before { content: '\e818'; } /* '' */
+.icon-provincia-tucuman:before { content: '\e819'; } /* '' */
+.icon-revista:before { content: '\e81a'; } /* '' */
+.icon-provincia-chubut:before { content: '\e81b'; } /* '' */
+.icon-provincia-chaco:before { content: '\e81c'; } /* '' */
+.icon-provincia-catamarca:before { content: '\e81d'; } /* '' */
+.icon-provincia-capital:before { content: '\e81e'; } /* '' */
+.icon-provincia-ba:before { content: '\e81f'; } /* '' */
+.icon-prototipo:before { content: '\e820'; } /* '' */
+.icon-notificaciones:before { content: '\e821'; } /* '' */
+.icon-mencion:before { content: '\e822'; } /* '' */
+.icon-mapa:before { content: '\e823'; } /* '' */
+.icon-jugadores:before { content: '\e824'; } /* '' */
+.icon-jugador:before { content: '\e825'; } /* '' */
+.icon-inicio:before { content: '\e826'; } /* '' */
+.icon-hashtag:before { content: '\e827'; } /* '' */
+.icon-foto:before { content: '\e828'; } /* '' */
+.icon-copa-3:before { content: '\e829'; } /* '' */
+.icon-copa-2:before { content: '\e82a'; } /* '' */
+.icon-copa-1:before { content: '\e82b'; } /* '' */
+.icon-copa:before { content: '\e82c'; } /* '' */
+.icon-comentarios-o:before { content: '\e82d'; } /* '' */

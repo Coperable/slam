@@ -2116,11 +2116,45 @@ a:focus {
   border-left: 1px solid #333333;
   color: #000000;
 }
+#jugador-descripcion {
+  color: #000000;
+}
+#jugador-descripcion a {
+  color: #37abc8;
+}
+#jugador-descripcion .datos-generales {
+  color: #000000;
+  padding-bottom: 60px;
+}
+#jugador-descripcion .datos-generales h1 {
+  font-size: 24pt;
+  font-family: raleway-semi-bold;
+  margin-top: 0;
+  color: #37abc8;
+}
+#jugador-descripcion .datos-generales p {
+  padding-bottom: 10px;
+  line-height: 160%;
+  margin-top: 60px;
+}
+#jugador-descripcion .avatar img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 0.8em;
+}
+#jugador-descripcion .panel-lateral {
+  padding-bottom: 40px;
+  border-left: 1px solid #333333;
+  color: #000000;
+}
 #torneo_content .descripcion {
   padding: 40px 120px 40px 20px;
   width: 90%;
   font-size: 16pt;
   color: #000000;
+}
+#torneo_content .info_jugador a {
+  display: inline-block;
 }
 #torneo_content .reglas {
   color: #000000;
